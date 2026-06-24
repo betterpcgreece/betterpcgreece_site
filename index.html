@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>betterPC - Hardware Guide</title>
+
+<style>
+/* =====================
+   BASE SYSTEM
+===================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #0f0f0f;
+    border-bottom: 1px solid #1c1c1c;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.logo span {
+    color: #ff7a00;
+}
+
+.nav-links a {
+    margin: 0 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.build-btn {
+    background: #ff7a00;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 40px;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero h1 span {
+    color: #ff7a00;
+}
+
+.hero h2 {
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.hero p {
+    opacity: 0.7;
+    max-width: 420px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.primary {
+    background: #ff7a00;
+    color: #000;
+    font-weight: 700;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+
+section {
+    padding: 60px 40px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* =====================
+   GRID SYSTEM
+===================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* =====================
+   CARD SYSTEM (UNIFIED)
+===================== */
+
+.card {
+    background: #111;
+    border: 1px solid #1f1f1f;
+    border-radius: 14px;
+    padding: 18px;
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff7a00;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+}
+
+.card p {
+    margin: 0;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+    <div class="logo">better<span>PC</span></div>
+
+    <div class="nav-links">
+        <a href="#formats">Formats</a>
+        <a href="#ram">RAM</a>
+        <a href="#storage">Storage</a>
+        <a href="#cpu">CPU</a>
+        <a href="#gpu">GPU</a>
+    </div>
+
+    <a class="build-btn" href="#">Build PC</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div>
+        <h1>better<span>PC</span></h1>
+        <h2>BUILD BETTER. UNDERSTAND BETTER.</h2>
+        <p>Learn PC hardware properly. Compare components. Build without guessing.</p>
+
+        <div class="hero-buttons">
+            <button class="btn primary">Explore</button>
+            <button class="btn secondary">Build Guide</button>
+        </div>
+    </div>
+
+    <div>
+        <img src="images/hero-pc.webp" alt="PC Build">
+    </div>
+</header>
+
+<!-- FORMATS -->
+<section id="formats">
+    <div class="section-title">Motherboard Formats</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>ATX</h3>
+            <p>Standard full-size motherboard format.</p>
+        </div>
+
+        <div class="card">
+            <h3>Micro-ATX</h3>
+            <p>Balanced size and affordability.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mini-ITX</h3>
+            <p>Compact builds with limited expansion.</p>
+        </div>
+    </div>
+</section>
+
+<!-- RAM -->
+<section id="ram">
+    <div class="section-title">RAM Generations</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>DDR4</h3>
+            <p>Affordable and widely used.</p>
+        </div>
+
+        <div class="card">
+            <h3>DDR5</h3>
+            <p>Faster, modern standard.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STORAGE -->
+<section id="storage">
+    <div class="section-title">Storage Types</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>SATA SSD</h3>
+            <p>Cheap, moderate speed.</p>
+        </div>
+
+        <div class="card">
+            <h3>NVMe SSD</h3>
+            <p>High-speed modern storage.</p>
+        </div>
+
+        <div class="card">
+            <h3>HDD</h3>
+            <p>Large capacity, slow performance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CPU -->
+<section id="cpu">
+    <div class="section-title">Processors</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Cores</h3>
+            <p>More cores = better multitasking.</p>
+        </div>
+
+        <div class="card">
+            <h3>Clock Speed</h3>
+            <p>Higher GHz = faster single tasks.</p>
+        </div>
+
+        <div class="card">
+            <h3>Architecture</h3>
+            <p>Efficiency and generation matter.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:30px; opacity:0.5;">
+    betterPC © 2026
+</footer>
+
+</body>
+</html>
