@@ -91,11 +91,13 @@ body{
     max-width:650px;
 }
 
-.hero-left h1{
+/* .hero-left h1{
     font-size:7rem;
     line-height:1;
+} */
+.hero h1{
+    font-size:48px;
 }
-
 .hero-left h1 span{
     color:#ff7a00;
 }
