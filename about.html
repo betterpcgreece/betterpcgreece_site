@@ -107,6 +107,8 @@
   .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.5rem; }
   .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; transition: border-color 0.2s; }
   .value-card:hover { border-color: rgba(249,115,22,0.3); }
+  .value-card-greece { /* Set the background image and cover the full card */ background: url('greek_flag.png') no-repeat center center; background-size: cover; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem;  transition: border-color 0.2s, transform 0.2s; /* Added smooth transition */ }
+  .value-card-greece:hover { border-color: rgba(249,115,22,0.3); }
   .value-num { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent); opacity: 0.4; line-height: 1; margin-bottom: 0.5rem; }
   .value-title { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
   .value-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
@@ -266,7 +268,7 @@
       <div class="value-title">Compatibility first</div>
       <p class="value-desc">Nothing is recommended without a check. CPU&ndash;mobo&ndash;RAM compatibility is flagged before you waste money.</p>
     </div>
-    <div class="value-card">
+    <div class="value-card-greek">
       <div class="value-num">05</div>
       <div class="value-title">Greek context</div>
       <p class="value-desc">Prices, availability, and part advice are grounded in the Greek and broader EU market, not the US.</p>
@@ -292,7 +294,7 @@
 </section>
 
 <footer>
-  <p>betterPC &copy; 2026 &mdash; <a href="index.html" style="color:var(--accent);text-decoration:none;">Guide</a> &middot; <a href="build_enriched.html" style="color:var(--accent);text-decoration:none;">Build</a> &middot; <a href="about.html" style="color:var(--accent);text-decoration:none;">About</a></p>
+  <p>betterPC &copy; 2026 &mdash; <a href="index.html" style="color:var(--accent);text-decoration:none;">Guide</a> &middot; <a href="build.html" style="color:var(--accent);text-decoration:none;">Build</a> &middot; <a href="about.html" style="color:var(--accent);text-decoration:none;">About</a></p>
 </footer>
 
 </body>
