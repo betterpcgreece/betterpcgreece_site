@@ -47,6 +47,20 @@
     border-bottom: 1px solid rgba(249,115,22,0.15);
   }
 
+ .lang-selector select {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+}
+.lang-selector select:hover {
+  border-color: var(--accent);
+}
   .logo {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.4rem;
@@ -348,6 +362,7 @@
 <!-- NAV -->
 <nav class="navbar">
   <div class="logo">better<span>PC</span></div>
+ 
   <div class="nav-links">
     <a href="#formats">Formats</a>
     <a href="#ram">RAM</a>
@@ -356,6 +371,17 @@
     <a href="#gpu">GPU</a>
     <a href="about.html">About us</a>
   </div>
+
+ <div class="lang-selector">
+    <select id="langSelect">
+      <option value="en">EN</option>
+      <option value="el">GR</option>
+      <option value="de">DE</option>
+      <option value="fr">FR</option>
+    </select>
+  </div>
+
+  <a href="#" class="build-btn" data-i18n="nav_build">Start Build</a>
   <a class="build-btn" href="build.html">Build Your PC</a>
 </nav>
 
@@ -590,6 +616,84 @@
   }, { rootMargin: '-40% 0px -55% 0px' });
 
   document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+</script>
+ <script>
+  // 1. Multi-language Translation dictionary matrix
+  const dictionary = {
+    en: {
+      nav_guides: "Guides",
+      nav_hardware: "Hardware",
+      nav_benchmarks: "Benchmarks",
+      nav_build: "Start Build",
+      hero_title: "Build a Better PC",
+      hero_subtitle: "Master your next custom computer assembly with real-time hardware tracking.",
+      feat1_title: "Latest Hardware",
+      feat1_desc: "Updated guides on new releases as they launch.",
+      feat2_title: "In-Depth Guides",
+      feat2_desc: "Understand what you're buying before you spend."
+    },
+    el: {
+      nav_guides: "Οδηγοί",
+      nav_hardware: "Υλικό",
+      nav_benchmarks: "Benchmarks",
+      nav_build: "Ξεκινήστε",
+      hero_title: "Φτιάξτε ένα Καλύτερο PC",
+      hero_subtitle: "Καθοδηγήστε την επόμενη custom συναρμολόγηση με ζωντανή παρακολούθηση υλικού.",
+      feat1_title: "Σύγχρονο Υλικό",
+      feat1_desc: "Ενημερωμένοι οδηγοί για νέες κυκλοφορίες αμέσως μόλις κυκλοφορήσουν.",
+      feat2_title: "Αναλυτικοί Οδηγοί",
+      feat2_desc: "Κατανοήστε τι αγοράζετε πριν ξοδέψετε τα χρήματά σας."
+    },
+    de: {
+      nav_guides: "Anleitungen",
+      nav_hardware: "Hardware",
+      nav_benchmarks: "Benchmarks",
+      nav_build: "PC Bauen",
+      hero_title: "Baue einen besseren PC",
+      hero_subtitle: "Meistern Sie Ihren nächsten PC-Bau mit Hardware-Tracking in Echtzeit.",
+      feat1_title: "Neueste Hardware",
+      feat1_desc: "Aktualisierte Leitfäden für Neuerscheinungen direkt zum Launch.",
+      feat2_title: "Ausführliche Berichte",
+      feat2_desc: "Verstehen Sie, was Sie kaufen, bevor Sie Geld ausgeben."
+    },
+    fr: {
+      nav_guides: "Guides",
+      nav_hardware: "Composants",
+      nav_benchmarks: "Benchmarks",
+      nav_build: "Commencer",
+      hero_title: "Créez un Meilleur PC",
+      hero_subtitle: "Maîtrisez votre prochain assemblage personnalisé avec un suivi matériel en temps réel.",
+      feat1_title: "Derniers Composants",
+      feat1_desc: "Guides mis à jour sur les nouveautés dès leur sortie.",
+      feat2_title: "Guides Détaillés",
+      feat2_desc: "Comprenez ce que vous achetez avant de dépenser."
+    }
+  };
+
+  // 2. Identify selection component references
+  const langSelect = document.getElementById('langSelect');
+
+  // 3. Application rendering engine
+  function translatePage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (dictionary[lang] && dictionary[lang][key]) {
+        element.textContent = dictionary[lang][key];
+      }
+    });
+    // Persist user selection target
+    localStorage.setItem('userLanguage', lang);
+    langSelect.value = lang;
+  }
+
+  // 4. Input Listener Trigger
+  langSelect.addEventListener('change', (e) => {
+    translatePage(e.target.value);
+  });
+
+  // 5. Run configuration on application launch
+  const savedLang = localStorage.getItem('userLanguage') || 'en';
+  translatePage(savedLang);
 </script>
 </body>
 </html>
