@@ -381,7 +381,7 @@
     </select>
   </div>
 
-  <a href="#" class="build-btn" data-i18n="nav_build">Start Build</a>
+  <!-- <a href="#" class="build-btn" data-i18n="nav_build">Start Build</a> -->
   <a class="build-btn" href="build.html">Build Your PC</a>
 </nav>
 
@@ -389,214 +389,208 @@
 <header class="hero">
   <div class="hero-content">
     <div class="hero-left">
-      <p class="hero-eyebrow">Hardware Intelligence</p>
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Hardware Intelligence</p>
       <h1>better<span>PC</span></h1>
-      <p class="hero-tagline">Build better. Be better.</p>
-      <p class="hero-desc">
+      <p class="hero-tagline" data-i18n="hero_tagline">Build better. Be better.</p>
+      <p class="hero-desc" data-i18n="hero_desc">
         Everything you need to know about PC hardware — explored, compared, and explained so you can build with confidence.
       </p>
       <div class="about-div">
-       <a href="about.html">Who are we?</a>
+       <a href="about.html" data-i18n="hero_about_link">Who are we?</a>
       </div>
     </div>
   </div>
 </header>
 
-<!-- FORMATS -->
 <section id="formats">
   <div class="section-inner">
-    <p class="section-label">Form Factor</p>
-    <h2 class="section-title">Motherboard Formats</h2>
-    <p class="section-desc">The motherboard determines which components fit in your build. Bigger boards offer more expansion slots; smaller ones save space.</p>
+    <p class="section-label" data-i18n="formats_label">Form Factor</p>
+    <h2 class="section-title" data-i18n="formats_title">Motherboard Formats</h2>
+    <p class="section-desc" data-i18n="formats_desc">The motherboard determines which components fit in your build. Bigger boards offer more expansion slots; smaller ones save space.</p>
     <div class="grid">
       <div class="card">
-        <span class="card-badge">Full Size</span>
+        <span class="card-badge" data-i18n="badge_full_size">Full Size</span>
         <h3>ATX</h3>
-        <p>The standard for most desktop builds. Plenty of PCIe slots, RAM slots, and room to grow.</p>
-        <p class="card-tag">Size: <strong>305 × 244 mm</strong></p>
+        <p data-i18n="atx_text">The standard for most desktop builds. Plenty of PCIe slots, RAM slots, and room to grow.</p>
+        <p class="card-tag"><span data-i18n="size_prefix">Size</span>: <strong>305 × 244 mm</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Mid Size</span>
+        <span class="card-badge" data-i18n="badge_mid_size">Mid Size</span>
         <h3>Micro-ATX</h3>
-        <p>A balanced choice. Slightly smaller than ATX, still supports most CPUs and expansion cards at a lower price.</p>
-        <p class="card-tag">Size: <strong>244 × 244 mm</strong></p>
+        <p data-i18n="matx_text">A balanced choice. Slightly smaller than ATX, still supports most CPUs and expansion cards at a lower price.</p>
+        <p class="card-tag"><span data-i18n="size_prefix">Size</span>: <strong>244 × 244 mm</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Compact</span>
+        <span class="card-badge" data-i18n="badge_compact">Compact</span>
         <h3>Mini-ITX</h3>
-        <p>Tiny footprint for small form factor cases. Limited to one PCIe slot and two RAM sticks — but impressively capable.</p>
-        <p class="card-tag">Size: <strong>170 × 170 mm</strong></p>
+        <p data-i18n="mitx_text">Tiny footprint for small form factor cases. Limited to one PCIe slot and two RAM sticks — but impressively capable.</p>
+        <p class="card-tag"><span data-i18n="size_prefix">Size</span>: <strong>170 × 170 mm</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Enthusiast</span>
+        <span class="card-badge" data-i18n="badge_enthusiast">Enthusiast</span>
         <h3>E-ATX</h3>
-        <p>Extended ATX for workstations and HEDT platforms. Maximum expansion, dual CPU support on some boards.</p>
-        <p class="card-tag">Size: <strong>305 × 330 mm</strong></p>
+        <p data-i18n="eatx_text">Extended ATX for workstations and HEDT platforms. Maximum expansion, dual CPU support on some boards.</p>
+        <p class="card-tag"><span data-i18n="size_prefix">Size</span>: <strong>305 × 330 mm</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RAM -->
 <section id="ram" class="alt">
   <div class="section-inner">
-    <p class="section-label">Memory</p>
-    <h2 class="section-title">RAM Generations</h2>
-    <p class="section-desc">System memory speed and capacity affect multitasking, creative workloads, and gaming frame rates.</p>
+    <p class="section-label" data-i18n="ram_label">Memory</p>
+    <h2 class="section-title" data-i18n="ram_title">RAM Generations</h2>
+    <p class="section-desc" data-i18n="ram_desc">System memory speed and capacity affect multitasking, creative workloads, and gaming frame rates.</p>
     <div class="grid grid-2">
       <div class="card">
-        <span class="card-badge">Current Gen</span>
+        <span class="card-badge" data-i18n="badge_current_gen">Current Gen</span>
         <h3>DDR5</h3>
-        <p>The modern standard for Intel 12th gen+ and AMD Ryzen 7000+. Higher bandwidth and on-die ECC. Kits start at 4800 MT/s and scale to 7200+ for enthusiasts.</p>
-        <p class="card-tag">Voltage: <strong>1.1 V</strong> &nbsp;·&nbsp; Max speed: <strong>8400+ MT/s</strong></p>
+        <p data-i18n="ddr5_text">The modern standard for Intel 12th gen+ and AMD Ryzen 7000+. Higher bandwidth and on-die ECC. Kits start at 4800 MT/s and scale to 7200+ for enthusiasts.</p>
+        <p class="card-tag"><span data-i18n="voltage_prefix">Voltage</span>: <strong>1.1 V</strong> &nbsp;·&nbsp; <span data-i18n="max_speed_prefix">Max speed</span>: <strong>8400+ MT/s</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Previous Gen</span>
+        <span class="card-badge" data-i18n="badge_prev_gen">Previous Gen</span>
         <h3>DDR4</h3>
-        <p>Still the most widely used standard. Affordable, broadly compatible with Intel 12th/13th gen and AMD Ryzen 5000. Sweet spot: 16–32 GB at 3200–3600 MHz.</p>
-        <p class="card-tag">Voltage: <strong>1.2 V</strong> &nbsp;·&nbsp; Max speed: <strong>~5333 MT/s</strong></p>
+        <p data-i18n="ddr4_text">Still the most widely used standard. Affordable, broadly compatible with Intel 12th/13th gen and AMD Ryzen 5000. Sweet spot: 16–32 GB at 3200–3600 MHz.</p>
+        <p class="card-tag"><span data-i18n="voltage_prefix">Voltage</span>: <strong>1.2 V</strong> &nbsp;·&nbsp; <span data-i18n="max_speed_prefix">Max speed</span>: <strong>~5333 MT/s</strong></p>
       </div>
-     <div class="card">
-        <span class="card-badge">Legacy</span>
+       <div class="card">
+        <span class="card-badge" data-i18n="badge_legacy">Legacy</span>
         <h3>DDR3</h3>
-        <p>Found in systems from roughly 2010–2017, pairing with Intel 2nd–4th gen and early AMD FX/AM3+ platforms. Fine for office use and light gaming, but a major bottleneck for anything modern.</p>
-        <p class="card-tag">Voltage: <strong>1.5 V</strong> &nbsp;·&nbsp; Max speed: <strong>~2133 MT/s</strong></p>
+        <p data-i18n="ddr3_text">Found in systems from roughly 2010–2017, pairing with Intel 2nd–4th gen and early AMD FX/AM3+ platforms. Fine for office use and light gaming, but a major bottleneck for anything modern.</p>
+        <p class="card-tag"><span data-i18n="voltage_prefix">Voltage</span>: <strong>1.5 V</strong> &nbsp;·&nbsp; <span data-i18n="max_speed_prefix">Max speed</span>: <strong>~2133 MT/s</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Very Old</span>
+        <span class="card-badge" data-i18n="badge_very_old">Very Old</span>
         <h3>DDR2</h3>
-        <p>Common from roughly 2004–2010 alongside early Core 2 Duo/Quad and AMD Athlon/Phenom chips. Severely limited bandwidth and capacity — only suitable for basic, low-demand systems today.</p>
-        <p class="card-tag">Voltage: <strong>1.8 V</strong> &nbsp;·&nbsp; Max speed: <strong>~1066 MT/s</strong></p>
+        <p data-i18n="ddr2_text">Common from roughly 2004–2010 alongside early Core 2 Duo/Quad and AMD Athlon/Phenom chips. Severely limited bandwidth and capacity — only suitable for basic, low-demand systems today.</p>
+        <p class="card-tag"><span data-i18n="voltage_prefix">Voltage</span>: <strong>1.8 V</strong> &nbsp;·&nbsp; <span data-i18n="max_speed_prefix">Max speed</span>: <strong>~1066 MT/s</strong></p>
       </div>
     </div>
   </div>
 </section>
-
+ 
 <!-- STORAGE -->
 <section id="storage">
   <div class="section-inner">
-    <p class="section-label">Storage</p>
-    <h2 class="section-title">Storage Types</h2>
-    <p class="section-desc">Where your OS lives defines how fast your PC feels. For most builds, an NVMe SSD for your OS drive is the right call.</p>
+    <p class="section-label" data-i18n="storage_label">Storage</p>
+    <h2 class="section-title" data-i18n="storage_title">Storage Types</h2>
+    <p class="section-desc" data-i18n="storage_desc">Where your OS lives defines how fast your PC feels. For most builds, an NVMe SSD for your OS drive is the right call.</p>
     <div class="grid">
       <div class="card">
-        <span class="card-badge">Recommended</span>
+        <span class="card-badge" data-i18n="badge_recommended">Recommended</span>
         <h3>NVMe SSD</h3>
-        <p>PCIe-connected M.2 drives. Gen 4 reaches 7 GB/s sequential reads — effectively instantaneous for OS and game loads.</p>
-        <p class="card-tag">Speed: <strong>3,500–7,000 MB/s</strong></p>
+        <p data-i18n="nvme_text">PCIe-connected M.2 drives. Gen 4 reaches 7 GB/s sequential reads — effectively instantaneous for OS and game loads.</p>
+        <p class="card-tag"><span data-i18n="speed_prefix">Speed</span>: <strong>3,500–7,000 MB/s</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Budget</span>
+        <span class="card-badge" data-i18n="badge_budget">Budget</span>
         <h3>SATA SSD</h3>
-        <p>2.5" or M.2 form factor, capped by the SATA interface. Still a massive upgrade over any spinning drive.</p>
-        <p class="card-tag">Speed: <strong>~550 MB/s</strong></p>
+        <p data-i18n="sata_text">2.5" or M.2 form factor, capped by the SATA interface. Still a massive upgrade over any spinning drive.</p>
+        <p class="card-tag"><span data-i18n="speed_prefix">Speed</span>: <strong>~550 MB/s</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Mass Storage</span>
+        <span class="card-badge" data-i18n="badge_mass_storage">Mass Storage</span>
         <h3>HDD</h3>
-        <p>Mechanical spinning disk. Unbeatable cost-per-GB for large media libraries and backups — just don't put your OS here.</p>
-        <p class="card-tag">Speed: <strong>80–160 MB/s</strong></p>
+        <p data-i18n="hdd_text">Mechanical spinning disk. Unbeatable cost-per-GB for large media libraries and backups — just don't put your OS here.</p>
+        <p class="card-tag"><span data-i18n="speed_prefix">Speed</span>: <strong>80–160 MB/s</strong></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CPU -->
 <section id="cpu" class="alt">
   <div class="section-inner">
-    <p class="section-label">Processor</p>
-    <h2 class="section-title">What to Know About CPUs</h2>
-    <p class="section-desc">The processor is the brain of your build. Choosing one comes down to your workload: gaming favors clock speed, creative work favors core count.</p>
+    <p class="section-label" data-i18n="cpu_label">Processor</p>
+    <h2 class="section-title" data-i18n="cpu_title">What to Know About CPUs</h2>
+    <p class="section-desc" data-i18n="cpu_desc">The processor is the brain of your build. Choosing one comes down to your workload: gaming favors clock speed, creative work favors core count.</p>
     <div class="grid">
       <div class="card">
-        <span class="card-badge">Core Count</span>
-        <h3>Cores & Threads</h3>
-        <p>More cores handle more simultaneous tasks. Video editing, 3D rendering, and streaming benefit most. Gaming rarely needs more than 8 cores.</p>
+        <span class="card-badge" data-i18n="badge_core_count">Core Count</span>
+        <h3 data-i18n="cores_threads_title">Cores & Threads</h3>
+        <p data-i18n="cores_threads_text">More cores handle more simultaneous tasks. Video editing, 3D rendering, and streaming benefit most. Gaming rarely needs more than 8 cores.</p>
       </div>
       <div class="card">
-        <span class="card-badge">Performance</span>
-        <h3>Clock Speed</h3>
-        <p>Measured in GHz. Higher clocks mean faster single-threaded tasks, which is most relevant for gaming. Boost clocks are short bursts above base.</p>
+        <span class="card-badge" data-i18n="badge_performance">Performance</span>
+        <h3 data-i18n="clock_speed_title">Clock Speed</h3>
+        <p data-i18n="clock_speed_text">Measured in GHz. Higher clocks mean faster single-threaded tasks, which is most relevant for gaming. Boost clocks are short bursts above base.</p>
       </div>
       <div class="card">
-        <span class="card-badge">Generation</span>
-        <h3>Architecture</h3>
-        <p>Each new generation improves instructions-per-clock (IPC). A newer lower-clocked CPU often beats an older higher-clocked one.</p>
+        <span class="card-badge" data-i18n="badge_generation">Generation</span>
+        <h3 data-i18n="architecture_title">Architecture</h3>
+        <p data-i18n="architecture_text">Each new generation improves instructions-per-clock (IPC). A newer lower-clocked CPU often beats an older higher-clocked one.</p>
       </div>
       <div class="card">
-        <span class="card-badge">Thermals</span>
-        <h3>TDP & Cooling</h3>
-        <p>Thermal Design Power tells you how much heat a CPU produces. Higher TDP chips need beefier coolers — don't skip this step.</p>
+        <span class="card-badge" data-i18n="badge_thermals">Thermals</span>
+        <h3 data-i18n="tdp_cooling_title">TDP & Cooling</h3>
+        <p data-i18n="tdp_cooling_text">Thermal Design Power tells you how much heat a CPU produces. Higher TDP chips need beefier coolers — don't skip this step.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GPU -->
 <section id="gpu">
   <div class="section-inner">
-    <p class="section-label">Graphics</p>
-    <h2 class="section-title">Graphics Cards</h2>
-    <p class="section-desc">The GPU is the most important component for gaming and visual workloads. It renders every frame you see on screen.</p>
+    <p class="section-label" data-i18n="gpu_label">Graphics</p>
+    <h2 class="section-title" data-i18n="gpu_title">Graphics Cards</h2>
+    <p class="section-desc" data-i18n="gpu_desc">The GPU is the most important component for gaming and visual workloads. It renders every frame you see on screen.</p>
     <div class="grid grid-2">
       <div class="card">
         <span class="card-badge">VRAM</span>
-        <h3>Memory Matters</h3>
-        <p>VRAM holds textures and scene data. Modern AAA games at high resolutions can demand 10–12 GB. 8 GB is the current minimum for 1080p, 12–16 GB for 1440p and 4K.</p>
-        <p class="card-tag">Recommended 1080p: <strong>8 GB</strong> &nbsp;·&nbsp; 4K: <strong>16 GB+</strong></p>
+        <h3 data-i18n="vram_title">Memory Matters</h3>
+        <p data-i18n="vram_text">VRAM holds textures and scene data. Modern AAA games at high resolutions can demand 10–12 GB. 8 GB is the current minimum for 1080p, 12–16 GB for 1440p and 4K.</p>
+        <p class="card-tag"><span data-i18n="vram_rec_prefix">Recommended 1080p</span>: <strong>8 GB</strong> &nbsp;·&nbsp; 4K: <strong>16 GB+</strong></p>
       </div>
       <div class="card">
-        <span class="card-badge">Upscaling</span>
+        <span class="card-badge" data-i18n="badge_upscaling">Upscaling</span>
         <h3>DLSS / FSR / XeSS</h3>
-        <p>AI-driven upscaling lets a GPU render at lower resolution and output at higher quality. DLSS (Nvidia), FSR (AMD), and XeSS (Intel) can dramatically improve frame rates.</p>
-        <p class="card-tag">Best-in-class: <strong>DLSS 3.5</strong> (Frame Gen)</p>
+        <p data-i18n="upscaling_text">AI-driven upscaling lets a GPU render at lower resolution and output at higher quality. DLSS (Nvidia), FSR (AMD), and XeSS (Intel) can dramatically improve frame rates.</p>
+        <p class="card-tag"><span data-i18n="upscaling_best_prefix">Best-in-class</span>: <strong>DLSS 3.5</strong> (Frame Gen)</p>
       </div>
       <div class="card">
-        <span class="card-badge">Ray Tracing</span>
-        <h3>Lighting & Shadows</h3>
-        <p>Hardware ray tracing simulates real light physics. Demanding but increasingly standard in modern titles. Nvidia RTX cards lead here; AMD has caught up on recent generations.</p>
+        <span class="card-badge" data-i18n="badge_ray_tracing">Ray Tracing</span>
+        <h3 data-i18n="lighting_shadows_title">Lighting & Shadows</h3>
+        <p data-i18n="lighting_shadows_text">Hardware ray tracing simulates real light physics. Demanding but increasingly standard in modern titles. Nvidia RTX cards lead here; AMD has caught up on recent generations.</p>
       </div>
       <div class="card">
-        <span class="card-badge">Power Draw</span>
-        <h3>PSU Planning</h3>
-        <p>High-end GPUs pull 300–450 W alone. Always budget headroom in your power supply — add CPU TDP, then add 20% for safety margin.</p>
+        <span class="card-badge" data-i18n="badge_power_draw">Power Draw</span>
+        <h3 data-i18n="psu_planning_title">PSU Planning</h3>
+        <p data-i18n="psu_planning_text">High-end GPUs pull 300–450 W alone. Always budget headroom in your power supply — add CPU TDP, then add 20% for safety margin.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURE STRIP -->
 <section class="feature-strip" style="padding: 0;">
   <div class="section-inner" style="max-width:100%;">
     <div class="grid" style="grid-template-columns: repeat(4, 1fr);">
       <div class="feat">
         <div class="feat-icon">⚡</div>
-        <h4>Latest Hardware</h4>
-        <p>Updated guides on new releases as they launch.</p>
+        <h4 data-i18n="feat1_title_strip">Latest Hardware</h4>
+        <p data-i18n="feat1_desc_strip">Updated guides on new releases as they launch.</p>
       </div>
       <div class="feat">
         <div class="feat-icon">📖</div>
-        <h4>In-Depth Guides</h4>
-        <p>Understand what you're buying before you spend.</p>
+        <h4 data-i18n="feat2_title_strip">In-Depth Guides</h4>
+        <p data-i18n="feat2_desc_strip">Understand what you're buying before you spend.</p>
       </div>
       <div class="feat">
         <div class="feat-icon">⚖️</div>
-        <h4>Compare & Decide</h4>
-        <p>Real specs, real benchmarks, no fluff.</p>
+        <h4 data-i18n="feat3_title_strip">Compare & Decide</h4>
+        <p data-i18n="feat3_desc_strip">Real specs, real benchmarks, no fluff.</p>
       </div>
       <div class="feat">
         <div class="feat-icon">🔧</div>
-        <h4>Build With Confidence</h4>
-        <p>Compatibility checks and part lists for every budget.</p>
+        <h4 data-i18n="feat4_title_strip">Build With Confidence</h4>
+        <p data-i18n="feat4_desc_strip">Compatibility checks and part lists for every budget.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="logo" style="margin-bottom:0.5rem;">better<span>PC</span></div>
-  <p>© 2026 betterPC. Build smart.</p>
+  <p data-i18n="footer_text_final">© 2026 betterPC. Build smart.</p>
 </footer>
 
 <script>
@@ -620,56 +614,328 @@
  <script>
   // 1. Multi-language Translation dictionary matrix
   const dictionary = {
-    en: {
-      nav_guides: "Guides",
-      nav_hardware: "Hardware",
-      nav_benchmarks: "Benchmarks",
-      nav_build: "Start Build",
-      hero_title: "Build a Better PC",
-      hero_subtitle: "Master your next custom computer assembly with real-time hardware tracking.",
-      feat1_title: "Latest Hardware",
-      feat1_desc: "Updated guides on new releases as they launch.",
-      feat2_title: "In-Depth Guides",
-      feat2_desc: "Understand what you're buying before you spend."
-    },
-    el: {
-      nav_guides: "Οδηγοί",
-      nav_hardware: "Υλικό",
-      nav_benchmarks: "Benchmarks",
-      nav_build: "Ξεκινήστε",
-      hero_title: "Φτιάξτε ένα Καλύτερο PC",
-      hero_subtitle: "Καθοδηγήστε την επόμενη custom συναρμολόγηση με ζωντανή παρακολούθηση υλικού.",
-      feat1_title: "Σύγχρονο Υλικό",
-      feat1_desc: "Ενημερωμένοι οδηγοί για νέες κυκλοφορίες αμέσως μόλις κυκλοφορήσουν.",
-      feat2_title: "Αναλυτικοί Οδηγοί",
-      feat2_desc: "Κατανοήστε τι αγοράζετε πριν ξοδέψετε τα χρήματά σας."
-    },
-    de: {
-      nav_guides: "Anleitungen",
-      nav_hardware: "Hardware",
-      nav_benchmarks: "Benchmarks",
-      nav_build: "PC Bauen",
-      hero_title: "Baue einen besseren PC",
-      hero_subtitle: "Meistern Sie Ihren nächsten PC-Bau mit Hardware-Tracking in Echtzeit.",
-      feat1_title: "Neueste Hardware",
-      feat1_desc: "Aktualisierte Leitfäden für Neuerscheinungen direkt zum Launch.",
-      feat2_title: "Ausführliche Berichte",
-      feat2_desc: "Verstehen Sie, was Sie kaufen, bevor Sie Geld ausgeben."
-    },
-    fr: {
-      nav_guides: "Guides",
-      nav_hardware: "Composants",
-      nav_benchmarks: "Benchmarks",
-      nav_build: "Commencer",
-      hero_title: "Créez un Meilleur PC",
-      hero_subtitle: "Maîtrisez votre prochain assemblage personnalisé avec un suivi matériel en temps réel.",
-      feat1_title: "Derniers Composants",
-      feat1_desc: "Guides mis à jour sur les nouveautés dès leur sortie.",
-      feat2_title: "Guides Détaillés",
-      feat2_desc: "Comprenez ce que vous achetez avant de dépenser."
-    }
-  };
-
+  en: {
+    hero_eyebrow: "Hardware Intelligence",
+    hero_tagline: "Build better. Be better.",
+    hero_desc: "Everything you need to know about PC hardware — explored, compared, and explained so you can build with confidence.",
+    hero_about_link: "Who are we?",
+    formats_label: "Form Factor",
+    formats_title: "Motherboard Formats",
+    formats_desc: "The motherboard determines which components fit in your build. Bigger boards offer more expansion slots; smaller ones save space.",
+    badge_full_size: "Full Size",
+    badge_mid_size: "Mid Size",
+    badge_compact: "Compact",
+    badge_enthusiast: "Enthusiast",
+    atx_text: "The standard for most desktop builds. Plenty of PCIe slots, RAM slots, and room to grow.",
+    matx_text: "A balanced choice. Slightly smaller than ATX, still supports most CPUs and expansion cards at a lower price.",
+    mitx_text: "Tiny footprint for small form factor cases. Limited to one PCIe slot and two RAM sticks — but impressively capable.",
+    eatx_text: "Extended ATX for workstations and HEDT platforms. Maximum expansion, dual CPU support on some boards.",
+    size_prefix: "Size",
+    ram_label: "Memory",
+    ram_title: "RAM Generations",
+    ram_desc: "System memory speed and capacity affect multitasking, creative workloads, and gaming frame rates.",
+    badge_current_gen: "Current Gen",
+    badge_prev_gen: "Previous Gen",
+    badge_legacy: "Legacy",
+    badge_very_old: "Very Old",
+    ddr5_text: "The modern standard for Intel 12th gen+ and AMD Ryzen 7000+. Higher bandwidth and on-die ECC. Kits start at 4800 MT/s and scale to 7200+ for enthusiasts.",
+    ddr4_text: "Still the most widely used standard. Affordable, broadly compatible with Intel 12th/13th gen and AMD Ryzen 5000. Sweet spot: 16–32 GB at 3200–3600 MHz.",
+    ddr3_text: "Found in systems from roughly 2010–2017, pairing with Intel 2nd–4th gen and early AMD FX/AM3+ platforms. Fine for office use and light gaming, but a major bottleneck for anything modern.",
+    ddr2_text: "Common from roughly 2004–2010 alongside early Core 2 Duo/Quad and AMD Athlon/Phenom chips. Severely limited bandwidth and capacity — only suitable for basic, low-demand systems today.",
+    voltage_prefix: "Voltage",
+    max_speed_prefix: "Max speed",
+   storage_label: "Storage",
+storage_title: "Storage Types",
+storage_desc: "Where your OS lives defines how fast your PC feels. For most builds, an NVMe SSD for your OS drive is the right call.",
+badge_recommended: "Recommended",
+nvme_text: "PCIe-connected M.2 drives. Gen 4 reaches 7 GB/s sequential reads — effectively instantaneous for OS and game loads.",
+speed_prefix: "Speed",
+badge_budget: "Budget",
+sata_text: "2.5\" or M.2 form factor, capped by the SATA interface. Still a massive upgrade over any spinning drive.",
+badge_mass_storage: "Mass Storage",
+hdd_text: "Mechanical spinning disk. Unbeatable cost-per-GB for large media libraries and backups — just don't put your OS here.",
+cpu_label: "Processor",
+cpu_title: "What to Know About CPUs",
+cpu_desc: "The processor is the brain of your build. Choosing one comes down to your workload: gaming favors clock speed, creative work favors core count.",
+badge_core_count: "Core Count",
+cores_threads_title: "Cores & Threads",
+cores_threads_text: "More cores handle more simultaneous tasks. Video editing, 3D rendering, and streaming benefit most. Gaming rarely needs more than 8 cores.",
+badge_performance: "Performance",
+clock_speed_title: "Clock Speed",
+clock_speed_text: "Measured in GHz. Higher clocks mean faster single-threaded tasks, which is most relevant for gaming. Boost clocks are short bursts above base.",
+badge_generation: "Generation",
+architecture_title: "Architecture",
+architecture_text: "Each new generation improves instructions-per-clock (IPC). A newer lower-clocked CPU often beats an older higher-clocked one.",
+badge_thermals: "Thermals",
+tdp_cooling_title: "TDP & Cooling",
+tdp_cooling_text: "Thermal Design Power tells you how much heat a CPU produces. Higher TDP chips need beefier coolers — don't skip this step.",
+gpu_label: "Graphics",
+gpu_title: "Graphics Cards",
+gpu_desc: "The GPU is the most important component for gaming and visual workloads. It renders every frame you see on screen.",
+vram_title: "Memory Matters",
+vram_text: "VRAM holds textures and scene data. Modern AAA games at high resolutions can demand 10–12 GB. 8 GB is the current minimum for 1080p, 12–16 GB for 1440p and 4K.",
+vram_rec_prefix: "Recommended 1080p",
+badge_upscaling: "Upscaling",
+upscaling_text: "AI-driven upscaling lets a GPU render at lower resolution and output at higher quality. DLSS (Nvidia), FSR (AMD), and XeSS (Intel) can dramatically improve frame rates.",
+upscaling_best_prefix: "Best-in-class",
+badge_ray_tracing: "Ray Tracing",
+lighting_shadows_title: "Lighting & Shadows",
+lighting_shadows_text: "Hardware ray tracing simulates real light physics. Demanding but increasingly standard in modern titles. Nvidia RTX cards lead here; AMD has caught up on recent generations.",
+badge_power_draw: "Power Draw",
+psu_planning_title: "PSU Planning",
+psu_planning_text: "High-end GPUs pull 300–450 W alone. Always budget headroom in your power supply — add CPU TDP, then add 20% for safety margin.",
+feat1_title_strip: "Latest Hardware",
+feat1_desc_strip: "Updated guides on new releases as they launch.",
+feat2_title_strip: "In-Depth Guides",
+feat2_desc_strip: "Understand what you're buying before you spend.",
+feat3_title_strip: "Compare & Decide",
+feat3_desc_strip: "Real specs, real benchmarks, no fluff.",
+feat4_title_strip: "Build With Confidence",
+feat4_desc_strip: "Compatibility checks and part lists for every budget.",
+footer_text_final: "© 2026 betterPC. Build smart."
+  },
+  el: {
+    hero_eyebrow: "Πληροφορίες Υλικού",
+    hero_tagline: "Φτιάξτε καλύτερα. Γίνετε καλύτεροι.",
+    hero_desc: "Όλα όσα πρέπει να γνωρίζετε για το υλικό των PC — αναλύονται, συγκρίνονται και επεξηγούνται ώστε να κάνετε τις αγορές σας με σιγουριά.",
+    hero_about_link: "Ποιοι είμαστε;",
+    formats_label: "Form Factor",
+    formats_title: "Μεγέθη Μητρικών",
+    formats_desc: "Η μητρική κάρτα καθορίζει ποια εξαρτήματα χωράνε στο build σας. Τα μεγαλύτερα μεγέθη προσφέρουν περισσότερες θύρες επέκτασης, ενώ τα μικρότερα εξοικονομούν χώρο.",
+    badge_full_size: "Πλήρες Μέγεθος",
+    badge_mid_size: "Μεσαίο Μέγεθος",
+    badge_compact: "Συμπαγές",
+    badge_enthusiast: "Enthusiast",
+    atx_text: "Το πρότυπο για τα περισσότερα desktop builds. Πολλές θύρες PCIe, υποδοχές RAM και άφθονος χώρος για αναβαθμίσεις.",
+    matx_text: "Μια ισορροπημένη επιλογή. Ελαφρώς μικρότερη από την ATX, υποστηρίζει τους περισσότερους επεξεργαστές και κάρτες σε χαμηλότερη τιμή.",
+    mitx_text: "Μικροσκοπικό μέγεθος για small form factor κουτιά. Περιορίζεται σε μία θύρα PCIe και δύο στικ RAM — αλλά είναι εξαιρετικά ικανή.",
+    eatx_text: "Extended ATX για workstations και πλατφόρμες HEDT. Μέγιστη επέκταση, υποστήριξη διπλού επεξεργαστή σε ορισμένες μητρικές.",
+    size_prefix: "Μέγεθος",
+    ram_label: "Μνήμη",
+    ram_title: "Γενιές RAM",
+    ram_desc: "Η ταχύτητα και η χωρητικότητα της μνήμης του συστήματος επηρεάζουν το multitasking, τις δημιουργικές εργασίες και τα frame rates στο gaming.",
+    badge_current_gen: "Σύγχρονη Γενιά",
+    badge_prev_gen: "Προηγούμενη Γενιά",
+    badge_legacy: "Παλαιότερη Γενιά",
+    badge_very_old: "Πολύ Παλιά",
+    ddr5_text: "Το σύγχρονο πρότυπο για Intel 12ης γενιάς+ και AMD Ryzen 7000+. Υψηλότερο bandwidth και on-die ECC. Τα κιτ ξεκινούν από τα 4800 MT/s και φτάνουν έως 7200+ για απαιτητικούς χρήστες.",
+    ddr4_text: "Παραμένει το πιο διαδεδομένο πρότυπο. Οικονομική, ευρέως συμβατή με Intel 12ης/13ης γενιάς και AMD Ryzen 5000. Ιδανική επιλογή: 16–32 GB στα 3200–3600 MHz.",
+    ddr3_text: "Βρίσκεται σε συστήματα από το 2010 έως το 2017 περίπου, σε συνδυασμό με Intel 2ης–4ης γενιάς και παλιές πλατφόρμες AMD FX/AM3+. Ιδανική για χρήση γραφείου και ελαφρύ gaming, αλλά αποτελεί σημαντικό bottleneck για σύγχρονες εφαρμογές.",
+    ddr2_text: "Κυκλοφορούσε κυρίως από το 2004 έως το 2010 μαζί με τους πρώτους επεξεργαστές Core 2 Duo/Quad και AMD Athlon/Phenom. Σημαντικά περιορισμένο bandwidth και χωρητικότητα — κατάλληλη μόνο για βασικά συστήματα χαμηλών απαιτήσεων σήμερα.",
+    voltage_prefix: "Τάση",
+    max_speed_prefix: "Μέγιστη ταχύτητα",
+   storage_label: "Αποθήκευση",
+storage_title: "Τύποι Αποθήκευσης",
+storage_desc: "Το πού είναι εγκατεστημένο το λειτουργικό σας σύστημα καθορίζει την απόκριση του PC σας. Για τα περισσότερα builds, ένας NVMe SSD είναι η ιδανική επιλογή.",
+badge_recommended: "Προτεινόμενο",
+nvme_text: "Δίσκοι M.2 συνδεδεμένοι μέσω PCIe. Η 4η γενιά αγγίζει τα 7 GB/s για σειριακή ανάγνωση — πρακτικά ακαριαίο φόρτωμα συστήματος και παιχνιδιών.",
+speed_prefix: "Ταχύτητα",
+badge_budget: "Οικονομικό",
+sata_text: "Μέγεθος 2.5\" ή M.2, με περιορισμό από το interface SATA. Παραμένει μια τεράστια αναβάθμιση σε σύγκριση με οποιονδήποτε μηχανικό δίσκο.",
+badge_mass_storage: "Μαζική Αποθήκευση",
+hdd_text: "Μηχανικός περιστρεφόμενος δίσκος. Αξεπέραστο κόστος ανά GB για μεγάλες βιβλιοθήκες πολυμέσων και αντίγραφα ασφαλείας — απλά μην βάλετε το λειτουργικό σας εκεί.",
+cpu_label: "Επεξεργαστής",
+cpu_title: "Τι πρέπει να γνωρίζετε για τους επεξεργαστές",
+cpu_desc: "Ο επεξεργαστής είναι ο εγκέφαλος του υπολογιστή σας. Η επιλογή εξαρτάται από τις εργασίες σας: το gaming ευνοείται από τη συχνότητα λειτουργίας, η δημιουργική εργασία από τον αριθμό των πυρήνων.",
+badge_core_count: "Πυρήνες",
+cores_threads_title: "Πυρήνες & Threads",
+cores_threads_text: "Περισσότεροι πυρήνες διαχειρίζονται περισσότερες ταυτόχρονες εργασίες. Το video editing, το 3D rendering και το streaming επφελούνται περισσότερο. Το gaming σπάνια χρειάζεται πάνω από 8 πυρήνες.",
+badge_performance: "Επίδοση",
+clock_speed_title: "Συχνότητα Ρολογιού",
+clock_speed_text: "Μετριέται σε GHz. Υψηλότερες συχνότητες σημαίνουν ταχύτερη απόδοση σε εργασίες ενός thread, κάτι που είναι εξαιρετικά σημαντικό για το gaming. Τα boost clocks είναι μικρές εκρήξεις ταχύτητας πάνω από τη βασική.",
+badge_generation: "Γενιά",
+architecture_title: "Αρχιτεκτονική",
+architecture_text: "Κάθε νέα γενιά βελτιώνει τις εντολές ανά κύκλο ρολογιού (IPC). Ένας νεότερος επεξεργαστής με χαμηλότερη συχνότητα συχνά κερδίζει έναν παλαιότερο με υψηλότερη συχνότητα.",
+badge_thermals: "Θερμική Συμπεριφορά",
+tdp_cooling_title: "TDP & Ψύξη",
+tdp_cooling_text: "Το Thermal Design Power δείχνει πόση θερμότητα παράγει ένας επεξεργαστής. Τα chip με υψηλότερο TDP χρειάζονται ισχυρότερες ψύκτρες — μην παραλείψετε αυτό το βήμα.",
+gpu_label: "Γραφικά",
+gpu_title: "Κάρτες Γραφικών",
+gpu_desc: "Η GPU είναι το πιο σημαντικό εξάρτημα για gaming και οπτικές εργασίες. Αναλαμβάνει να σχεδιάσει κάθε frame που βλέπετε στην οθόνη.",
+vram_title: "Η Μνήμη Μετράει",
+vram_text: "Η VRAM κρατάει τα textures και τα δεδομένα της σκηνής. Τα σύγχρονα AAA παιχνίδια σε υψηλές αναλύσεις απαιτούν 10–12 GB. Τα 8 GB είναι το τρέχον ελάχιστο για 1080p, και 12–16 GB για 1440p και 4K.",
+vram_rec_prefix: "Προτεινόμενο 1080p",
+badge_upscaling: "Upscaling",
+upscaling_text: "Το upscaling μέσω AI επιτρέπει στην GPU να κάνει render σε χαμηλότερη ανάλυση και να εξάγει υψηλότερη ποιότητα. Τα DLSS (Nvidia), FSR (AMD) και XeSS (Intel) βελτιώνουν δραματικά τα frame rates.",
+upscaling_best_prefix: "Κορυφαίο",
+badge_ray_tracing: "Ray Tracing",
+lighting_shadows_title: "Φωτισμοί & Σκιές",
+lighting_shadows_text: "Το hardware ray tracing προσομοιώνει τη φυσική συμπεριφορά του φωτός. Απαιτητικό, αλλά αποτελεί πλέον standard στους σύγχρονους τίτλους. Οι κάρτες Nvidia RTX προηγούνται εδώ.",
+badge_power_draw: "Κατανάλωση Ρεύματος",
+psu_planning_title: "Σχεδιασμός Τροφοδοτικού",
+psu_planning_text: "Οι high-end κάρτες τραβάνε 300–450 W από μόνες τους. Πάντα να αφήνετε περιθώριο στο τροφοδοτικό σας — προσθέστε το TDP του επεξεργαστή και βάλτε ένα +20% για ασφάλεια.",
+feat1_title_strip: "Σύγχρονο Υλικό",
+feat1_desc_strip: "Ενημερωμένοι οδηγοί για νέες κυκλοφορίες αμέσως μόλις κυκλοφορήσουν.",
+feat2_title_strip: "Αναλυτικοί Οδηγοί",
+feat2_desc_strip: "Κατανοήστε τι αγοράζετε πριν ξοδέψετε τα χρήματά σας.",
+feat3_title_strip: "Σύγκριση & Απόφαση",
+feat3_desc_strip: "Πραγματικά χαρακτηριστικά, αληθινά benchmarks, χωρίς περιττές λεπτομέρειες.",
+feat4_title_strip: "Συναρμολόγηση με Σιγουριά",
+feat4_desc_strip: "Έλεγχοι συμβατότητας και λίστες εξαρτημάτων για κάθε budget.",
+footer_text_final: "© 2026 betterPC. Έξυπνη σχεδίαση.",
+   
+  },
+  de: {
+    hero_eyebrow: "Hardware-Intelligenz",
+    hero_tagline: "Besser bauen. Besser sein.",
+    hero_desc: "Alles, was Sie über PC-Hardware wissen müssen — analysiert, verglichen und erklärt, damit Sie mit Vertrauen bauen können.",
+    hero_about_link: "Wer sind wir?",
+    formats_label: "Formfaktor",
+    formats_title: "Mainboard-Formate",
+    formats_desc: "Das Mainboard bestimmt, welche Komponenten in Ihren PC passen. Größere Platinen bieten mehr Erweiterungssteckplätze; kleinere sparen Platz.",
+    badge_full_size: "Volle Größe",
+    badge_mid_size: "Mittlere Größe",
+    badge_compact: "Kompakt",
+    badge_enthusiast: "Enthusiast",
+    atx_text: "Der Standard für die meisten Desktop-Builds. Viele PCIe-Slots, RAM-Steckplätze und viel Raum für Upgrades.",
+    matx_text: "Eine ausgewogene Wahl. Etwas kleiner als ATX, unterstützt dennoch die meisten CPUs und Erweiterungskarten zu einem niedrigeren Preis.",
+    mitx_text: "Winzige Stellfläche für Small-Form-Factor-Gehäuse. Beschränkt auf einen PCIe-Slot und zwei RAM-Riegel — aber beeindruckend leistungsstark.",
+    eatx_text: "Extended ATX für Workstations und HEDT-Plattformen. Maximale Erweiterung, teilweise Unterstützung für Dual-CPUs.",
+    size_prefix: "Größe",
+    ram_label: "Speicher",
+    ram_title: "RAM-Generationen",
+    ram_desc: "Geschwindigkeit und Kapazität des Arbeitsspeichers beeinflussen Multitasking, kreative Workloads und Gaming-Frameraten.",
+    badge_current_gen: "Aktuelle Gen",
+    badge_prev_gen: "Vorherige Gen",
+    badge_legacy: "Legacy",
+    badge_very_old: "Sehr Alt",
+    ddr5_text: "Der moderne Standard für Intel 12. Gen+ und AMD Ryzen 7000+. Höhere Bandbreite und On-Die-ECC. Kits beginnen bei 4800 MT/s und reichen bis zu 7200+ für Enthusiasten.",
+    ddr4_text: "Immer noch der am weitesten verbreitete Standard. Erschwinglich, weitgehend kompatibel mit Intel 12./13. Gen und AMD Ryzen 5000. Sweet Spot: 16–32 GB bei 3200–3600 MHz.",
+    ddr3_text: "Zu finden in Systemen von ca. 2010–2017, gepaart mit Intel 2.–4. Gen und frühen AMD FX/AM3+ Plattformen. Reicht für Büroarbeiten und leichtes Gaming, aber ein großer Flaschenhals für moderne Anwendungen.",
+    ddr2_text: "Verbreitet von ca. 2004–2010 neben frühen Core 2 Duo/Quad und AMD Athlon/Phenom Chips. Stark eingeschränkte Bandbreite und Kapazität — heute nur noch für einfachste Systeme geeignet.",
+    voltage_prefix: "Spannung",
+    max_speed_prefix: "Max. Tempo",
+   storage_label: "Speicher",
+storage_title: "Speichertypen",
+storage_desc: "Wo Ihr Betriebssystem liegt, bestimmt, wie schnell sich Ihr PC anfühlt. Für die meisten Builds ist eine NVMe SSD als Systemlaufwerk die richtige Wahl.",
+badge_recommended: "Empfohlen",
+nvme_text: "Über PCIe angebundene M.2-Laufwerke. Gen 4 erreicht 7 GB/s sequenzielles Lesen – praktisch verzögerungsfreies Laden von System und Spielen.",
+speed_prefix: "Tempo",
+badge_budget: "Budget",
+sata_text: "2,5\"- oder M.2-Formfaktor, begrenzt durch die SATA-Schnittstelle. Dennoch ein massives Upgrade gegenüber jeder rotierenden Festplatte.",
+badge_mass_storage: "Massenspeicher",
+hdd_text: "Mechanische Magnetscheibe. Unschlagbare Kosten pro GB für große Medienbibliotheken und Backups – installieren Sie nur nicht Ihr OS darauf.",
+cpu_label: "Prozessor",
+cpu_title: "Wissenswertes über CPUs",
+cpu_desc: "Der Prozessor ist das Gehirn Ihres PCs. Die Wahl hängt von Ihrer Arbeit ab: Gaming bevorzugt Taktrate, kreative Arbeit die Kernanzahl.",
+badge_core_count: "Kerne",
+cores_threads_title: "Kerne & Threads",
+cores_threads_text: "Mehr Kerne verarbeiten mehr Aufgaben gleichzeitig. Videobearbeitung, 3D-Rendering und Streaming profitieren am meisten. Gaming erfordert selten mehr als 8 Kerne.",
+badge_performance: "Leistung",
+clock_speed_title: "Taktrate",
+clock_speed_text: "Gemessen in GHz. Höhere Taktraten bedeuten schnellere Single-Thread-Leistung, was für Gaming am wichtigsten ist. Boost-Takte sind kurze Spitzen über dem Basiswert.",
+badge_generation: "Generation",
+architecture_title: "Architektur",
+architecture_text: "Jede neue Generation verbessert die Instruktionen pro Taktzyklus (IPC). Eine neuere CPU mit niedrigerem Takt schlägt oft eine ältere mit höherem Takt.",
+badge_thermals: "Thermik",
+tdp_cooling_title: "TDP & Kühlung",
+tdp_cooling_text: "Die Thermal Design Power gibt an, wie viel Abwärme eine CPU erzeugt. Chips mit höherer TDP benötigen stärkere Kühler – sparen Sie nicht an dieser Stelle.",
+gpu_label: "Grafik",
+gpu_title: "Grafikkarten",
+gpu_desc: "Die GPU ist die wichtigste Komponente für Gaming und visuelle Workloads. Sie rendert jedes einzelne Bild, das Sie auf dem Bildschirm sehen.",
+vram_title: "Der Speicher zählt",
+vram_text: "VRAM hält Texturen und Szenendaten bereit. Moderne AAA-Spiele in hohen Auflösungen können 10–12 GB verlangen. 8 GB sind das Minimum für 1080p, 12–16 GB für 1440p und 4K.",
+vram_rec_prefix: "Empfohlen für 1080p",
+badge_upscaling: "Upscaling",
+upscaling_text: "KI-gestütztes Upscaling lässt eine GPU in niedrigerer Auflösung rendern und eine höhere Qualität ausgeben. DLSS (Nvidia), FSR (AMD) und XeSS (Intel) steigern die Frameraten drastisch.",
+upscaling_best_prefix: "Klassenbester",
+badge_ray_tracing: "Raytracing",
+lighting_shadows_title: "Licht & Schatten",
+lighting_shadows_text: "Hardware-Raytracing simuliert die reale Lichtphysik. Anspruchsvoll, aber zunehmend Standard in modernen Titeln. Nvidia RTX-Karten sind hier führend.",
+badge_power_draw: "Leistungsaufnahme",
+psu_planning_title: "Netzteil-Planung",
+psu_planning_text: "High-End-GPUs ziehen allein 300–450 W. Planen Sie immer Puffer in Ihrem Netzteil ein – addieren Sie die CPU-TDP und rechnen Sie 20% Sicherheitsmarge hinzu.",
+feat1_title_strip: "Neueste Hardware",
+feat1_desc_strip: "Aktualisierte Leitfäden für Neuerscheinungen direkt zum Launch.",
+feat2_title_strip: "Ausführliche Berichte",
+feat2_desc_strip: "Verstehen Sie, was Sie kaufen, bevor Sie Geld ausgeben.",
+feat3_title_strip: "Vergleichen & Entscheiden",
+feat3_desc_strip: "Echte Spezifikationen, echte Benchmarks, kein Schnickschnack.",
+feat4_title_strip: "Sicher Zusammenbauen",
+feat4_desc_strip: "Kompatibilitätsprüfungen und Teilelisten für jedes Budget.",
+footer_text_final: "© 2026 betterPC. Intelligent bauen."
+  },
+  fr: {
+    hero_eyebrow: "Intelligence Matérielle",
+    hero_tagline: "Construisez mieux. Soyez meilleur.",
+    hero_desc: "Tout ce que vous devez savoir sur les composants PC — exploré, comparé et expliqué pour que vous puissiez assembler en toute confiance.",
+    hero_about_link: "Qui sommes-nous ?",
+    formats_label: "Facteur de Forme",
+    formats_title: "Formats de Cartes Mères",
+    formats_desc: "La carte mère détermine quels composants s'adaptent à votre configuration. Les cartes plus grandes offrent plus de slots d'extension ; les plus petites gagnent de la place.",
+    badge_full_size: "Taille Standard",
+    badge_mid_size: "Taille Moyenne",
+    badge_compact: "Compact",
+    badge_enthusiast: "Enthousiaste",
+    atx_text: "La norme για la plupart des configurations de bureau. Nombreux slots PCIe et RAM, et de l'espace pour évoluer.",
+    matx_text: "Un choix équilibré. Légèrement plus petit que l'ATX, il prend tout de même en charge la plupart des processeurs et cartes d'extension à un prix inférieur.",
+    mitx_text: "Empreinte minuscule pour les boîtiers compacts (SFF). Limité à un slot PCIe et deux barrettes de RAM — mais impressionnant de capacités.",
+    eatx_text: "ATX étendu pour les stations de travail et les plateformes HEDT. Évolutivité maximale, support double processeur sur certaines cartes.",
+    size_prefix: "Taille",
+    ram_label: "Mémoire",
+    ram_title: "Générations de RAM",
+    ram_desc: "La vitesse et la capacité de la mémoire système affectent le multitâche, les charges de travail créatives et les performances en jeu.",
+    badge_current_gen: "Gen Actuelle",
+    badge_prev_gen: "Gen Précédente",
+    badge_legacy: "Ancienne Gen",
+    badge_very_old: "Très Ancien",
+    ddr5_text: "La norme moderne pour Intel 12e gen+ et AMD Ryzen 7000+. Bande passante plus élevée et ECC intégré. Les kits commencent à 4800 MT/s et grimpent jusqu'à 7200+ pour les passionnés.",
+    ddr4_text: "Reste le standard le plus largement utilisé. Abordable, largement compatible avec Intel 12e/13e gen et AMD Ryzen 5000. Le compromis idéal : 16–32 Go à 3200–3600 MHz.",
+    ddr3_text: "Présent dans les systèmes sortis entre 2010 et 2017 environ, associé aux Intel de 2e–4e gen et aux anciennes plateformes AMD FX/AM3+. Convient pour la bureautique et les jeux légers, mais constitue un goulot d'étranglement majeur pour le reste.",
+    ddr2_text: "Courant entre 2004 et 2010 aux côtés des premiers processeurs Core 2 Duo/Quad et AMD Athlon/Phenom. Bande passante et capacité sévèrement limitées — convient uniquement aux systèmes de base très peu exigeants aujourd'hui.",
+    voltage_prefix: "Tension",
+    max_speed_prefix: "Vitesse max",
+   storage_label: "Stockage",
+storage_title: "Types de Stockage",
+storage_desc: "L'emplacement de votre système d'exploitation détermine la réactivité globale de votre PC. Un SSD NVMe pour le disque système reste le meilleur choix.",
+badge_recommended: "Recommandé",
+nvme_text: "Disques M.2 connectés en PCIe. La génération 4 atteint 7 Go/s en lecture séquentielle — chargements du système et des jeux quasi instantanés.",
+speed_prefix: "Vitesse",
+badge_budget: "Budget",
+sata_text: "Format 2,5\" ou M.2, limité par l'interface SATA. Reste une mise à niveau massive par rapport à n'importe quel disque dur mécanique.",
+badge_mass_storage: "Stockage de Masse",
+hdd_text: "Disque mécanique rotatif. Rapport coût-par-Go imbattable pour les grandes bibliothèques de médias et sauvegardes — évitez juste d'y mettre l'OS.",
+cpu_label: "Processeur",
+cpu_title: "Ce qu'il faut savoir sur les CPU",
+cpu_desc: "Le processeur est le cerveau de votre configuration. Son choix dépend de vos tâches : les jeux privilégient la fréquence, le travail créatif le nombre de cœurs.",
+badge_core_count: "Nombre de Cœurs",
+cores_threads_title: "Cœurs & Threads",
+cores_threads_text: "Plus de cœurs permettent de gérer plus de tâches simultanées. Le montage vidéo, le rendu 3D et le streaming en profitent le plus. Les jeux dépassent rarement 8 cœurs.",
+badge_performance: "Performance",
+clock_speed_title: "Fréquence d'horloge",
+clock_speed_text: "Mesurée en GHz. Des fréquences plus hautes accélèrent les tâches mono-thread, cruciales pour le jeu. Les fréquences Turbo sont de courtes pointes au-dessus du niveau de base.",
+badge_generation: "Génération",
+architecture_title: "Architecture",
+architecture_text: "Chaque nouvelle génération améliore le nombre d'instructions par cycle (IPC). Un processeur plus récent à fréquence égale ou inférieure bat souvent un ancien modèle mieux cadencé.",
+badge_thermals: "Thermique",
+tdp_cooling_title: "TDP & Refroidissement",
+tdp_cooling_text: "Le TDP (Thermal Design Power) indique la chaleur émise par le CPU. Les puces à fort TDP nécessitent des systèmes de refroidissement plus performants — ne négligez pas cette étape.",
+gpu_label: "Graphismes",
+gpu_title: "Cartes Graphiques",
+gpu_desc: "La GPU est le composant le plus important pour le jeu et les charges de travail visuelles. Elle calcule et affiche chaque image visible à l'écran.",
+vram_title: "L'importance de la mémoire",
+vram_text: "La VRAM stocke les textures et les données de la scène. Les jeux AAA récents en haute résolution peuvent exiger 10 à 12 Go. 8 Go est le minimum actuel pour le 1080p, et 12 à 16 Go pour le 1440p et la 4K.",
+vram_rec_prefix: "Recommandé 1080p",
+badge_upscaling: "Upscaling",
+upscaling_text: "L'upscaling géré par l'IA permet à une carte de calculer l'image à une résolution inférieure avant de l'afficher en haute qualité. Le DLSS (Nvidia), le FSR (AMD) et l'XeSS (Intel) boostent les performances.",
+upscaling_best_prefix: "Meilleur de sa catégorie",
+badge_ray_tracing: "Ray Tracing",
+lighting_shadows_title: "Lumières & Ombres",
+lighting_shadows_text: "Le ray tracing matériel simule la physique réelle de la lumière. Gourmand en ressources, mais devient une norme dans les jeux récents. Les cartes Nvidia RTX mènent la danse ici.",
+badge_power_draw: "Consommation",
+psu_planning_title: "Choix de l'Alimentation",
+psu_planning_text: "Les GPU haut de gamme consomment entre 300 et 450 W à elles seules. Prévoyez toujours de la marge dans votre bloc : combinez les TDP et ajoutez 20% de sécurité.",
+feat1_title_strip: "Derniers Composants",
+feat1_desc_strip: "Guides mis à jour sur les nouveautés dès leur sortie.",
+feat2_title_strip: "Guides Détaillés",
+feat2_desc_strip: "Comprenez ce que vous achetez avant de dépenser.",
+feat3_title_strip: "Comparer & Choisir",
+feat3_desc_strip: "Des spécifications réelles, de vrais benchmarks, sans chichis.",
+feat4_title_strip: "Assembler en Confiance",
+feat4_desc_strip: "Vérifications de compatibilité et listes de pièces pour tous les budgets.",
+footer_text_final: "© 2026 betterPC. Construisez intelligemment."
+  }
+};
   // 2. Identify selection component references
   const langSelect = document.getElementById('langSelect');
 
