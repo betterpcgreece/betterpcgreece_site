@@ -130,40 +130,26 @@
   border-radius: 8px;
   border: 1px solid var(--border);
   padding: 1.75rem;
-  isolation: isolate; /* keeps z-index scoped to this card */
+  isolation: isolate;
 }
 
-/* Base flag layer — broad, slow sway */
-.story-card-greece::before {
-  content: '';
+.story-card-greece .flag-bg {
   position: absolute;
-  inset: -15% -15%;
-  background: url('greek-flag.png') no-repeat center center;
-  background-size: cover;
-  animation: flagWaveBase 6s ease-in-out infinite;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
-  filter: brightness(1);
 }
 
-/* Sheen layer — diagonal light sweep simulating fabric catching light as it ripples */
+/* dark overlay so light text stays readable over the video */
 .story-card-greece::after {
   content: '';
   position: absolute;
-  inset: -15% -15%;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 30%,
-      rgba(255,255,255,0.10) 45%,
-      rgba(255,255,255,0.18) 50%,
-      rgba(255,255,255,0.10) 55%,
-      transparent 70%
-    ),
-    rgba(13,13,13,0.4);
-  background-size: 250% 250%, 100% 100%;
-  animation: flagSheen 6s ease-in-out infinite;
+  inset: 0;
+  background: rgba(13,13,13,0.5);
   z-index: 1;
-  mix-blend-mode: overlay;
 }
 
 .story-card-greece .card-content {
@@ -171,26 +157,14 @@
   z-index: 2;
 }
 
-@keyframes flagWaveBase {
-  0%   { transform: skewY(0deg) scaleX(1.04) scaleY(1.03) translateX(0%); }
-  20%  { transform: skewY(1deg) scaleX(1.05) scaleY(1.02) translateX(0.6%); }
-  40%  { transform: skewY(-0.6deg) scaleX(1.03) scaleY(1.04) translateX(-0.4%); }
-  60%  { transform: skewY(0.8deg) scaleX(1.05) scaleY(1.02) translateX(0.5%); }
-  80%  { transform: skewY(-0.4deg) scaleX(1.04) scaleY(1.03) translateX(-0.3%); }
-  100% { transform: skewY(0deg) scaleX(1.04) scaleY(1.03) translateX(0%); }
+.story-card-greece span {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0.75rem;
 }
 
-@keyframes flagSheen {
-  0%   { background-position: 0% 0%, 0 0; }
-  50%  { background-position: 100% 100%, 0 0; }
-  100% { background-position: 0% 0%, 0 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .story-card-greece::before,
-  .story-card-greece::after {
-    animation: none;
-  }
+.story-card-greece h3 {
+  margin-bottom: 0.5rem;
 }
   /* .story-card-greece {  border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; } */
   .story-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
@@ -315,10 +289,20 @@
       <p data-i18n="about_story_p2">No other Greek PC guide covers DDR2 and DDR3 platforms...</p>
     </div>
     <div class="story-card-greece">
+      <video class="flag-bg" autoplay loop muted playsinline>
+        <source src="https://media.tenor.com/nWhCnPLflJYAAAPo/greek-flag-waving.mp4" type="video/mp4">
+      </video>
+      <div class="card-content">
+        <span>🇬🇷</span>
+        <h3 data-i18n="about_story_h3">Made for the Greek market</h3>
+        <p data-i18n="about_story_p3">Prices include 24% Greek VAT and reflect what you'd actually pay locally...</p>
+      </div>
+    </div>
+    <!-- <div class="story-card-greece">
       <span>🇬🇷</span>
       <h3 data-i18n="about_story_h3">Made for the Greek market</h3>
       <p data-i18n="about_story_p3">Prices include 24% Greek VAT and reflect what you'd actually pay locally...</p>
-    </div>
+    </div> -->
     <div class="story-card">
       <span>📚</span>
       <h3 data-i18n="about_story_h4">Plain language, real knowledge</h3>
