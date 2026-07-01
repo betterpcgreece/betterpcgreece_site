@@ -483,40 +483,45 @@
       about_story_eyebrow: "Историята", about_story_title: "Защо съществува better<span>PC</span>", about_story_h1: "Проблемът със стария хардуер", about_story_p1: "В Гърция има милиони компютри от периода 2006–2015, събиращи прах по складове...", about_story_h2: "Конфигураторът", about_story_p2: "Никой друг гръцки гайд не покрива DDR2 и DDR3 платформи...", about_story_h3: "За гръцкия пазар", about_story_p3: "Цените включват 24% гръцки ДДС...", about_story_h4: "Прост език", about_story_p4: "Без сложен жаргон. Гайдове, написани за всеки...",
       about_values_eyebrow: "Принципи", about_values_title: "В какво вярва better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Честни цени", about_v1_desc: "Прозрачни оценки.", about_v2_title: "Без реклами и партньорски връзки", about_v2_desc: "Не печелим от препоръчани марки.", about_v3_title: "Старият хардуер има значение", about_v3_desc: "Заслужава си да вдъхнем живот на DDR2/DDR3 машините.", about_v4_title: "Съвместимост преди всичко", about_v4_desc: "Проверка на CPU-дънна платка-RAM.", about_v5_title: "Гръцки контекст", about_v5_desc: "Цени и съвети, базирани на местния пазар.", about_v6_title: "Постоянно подобрение", about_v6_desc: "Обновления според пазара.",
       about_cta_title: "Готови ли сте?", about_cta_desc: "Използвайте конфигуратора, за да сметнете новия си компютър.", about_cta_btn_primary: "🛠️ Отвори конфигуратора"
-    }
-  };
-
+    }} 
   const langSelect = document.getElementById('langSelect');
 
-  // 3. Application rendering engine
+  // Η συνάρτηση που αλλάζει τη γλώσσα
   function translatePage(lang) {
+    // 1. Εδώ αλλάζεις τα κείμενα (ο κώδικας που ήδη έχεις)
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (dictionary[lang] && dictionary[lang][key]) {
         element.innerHTML = dictionary[lang][key];
       }
     });
-    
-    // Αποθήκευση της επιλογής στο localStorage για τις επόμενες σελίδες
+
+    // 2. ΑΠΟΘΗΚΕΥΣΗ: Γράφουμε στο localStorage
     localStorage.setItem('userLanguage', lang);
-    
-    // Κρίσιμο fix: Συγχρονισμός της τιμής του dropdown ώστε να δείχνει τη σωστή γλώσσα
+
+    // 3. ΕΠΙΒΟΛΗ: Ενημερώνουμε το dropdown να δείχνει τη σωστή γλώσσα
     if (langSelect) langSelect.value = lang;
     
     document.documentElement.setAttribute("lang", lang);
   }
 
-  // 4. Input Listener Trigger
+  // 4. ΕΚΤΕΛΕΣΗ κατά τη φόρτωση
+  window.addEventListener('DOMContentLoaded', () => {
+    // Διαβάζουμε τι υπάρχει αποθηκευμένο (αν δεν υπάρχει, βάζουμε 'en')
+    const savedLang = localStorage.getItem('userLanguage') || 'en';
+    
+    // Επιβάλλουμε τη γλώσσα στο dropdown και στο UI
+    translatePage(savedLang);
+  });
+
+  // 5. LISTENER: Όταν ο χρήστης αλλάζει το dropdown χειροκίνητα
   if (langSelect) {
     langSelect.addEventListener('change', (e) => {
-      translatePage(e.target.value);
+      translatePage(e.target.value); // Εδώ χρησιμοποιούμε το e.target.value (το this.value)
     });
   }
-
-  // 5. Run configuration on application launch
-  // Διαβάζει το localStorage. Αν δεν υπάρχει τίποτα αποθηκευμένο, βάζει default τα αγγλικά ('en')
-  const savedLang = localStorage.getItem('userLanguage') || 'en';
-  translatePage(savedLang);
 </script>
+
+ 
 </body>
 </html>
