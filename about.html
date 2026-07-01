@@ -101,72 +101,66 @@
   .section-eyebrow { font-family: 'Space Grotesk', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
   .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -1px; margin-bottom: 1.5rem; }
   .story-grid {
-  display: grid;
-  /* Automatically wraps columns when screen size drops below ~300px per card */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem; /* Clean spacing between cards */
-  margin-top: 2rem;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
 
-.story-card {
-  background: var(--card); /* #1a1a1a, matches your theme */
-  padding: 1.75rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-}
+  .story-card {
+    background: var(--card);
+    padding: 1.75rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
 
-.story-card span {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-bottom: 0.75rem;
-}
+  .story-card span {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
 
-.story-card h3 {
-  margin-bottom: 0.5rem;
-}
- .story-card-greece {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  padding: 1.75rem;
-  isolation: isolate;
-}
+  .story-card h3 { margin-bottom: 0.5rem; }
 
-.story-card-greece .flag-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
+  .story-card-greece {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 1.75rem;
+    isolation: isolate;
+  }
 
-/* dark overlay so light text stays readable over the video */
-.story-card-greece::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(13,13,13,0.5);
-  z-index: 1;
-}
+  .story-card-greece .flag-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
 
-.story-card-greece .card-content {
-  position: relative;
-  z-index: 2;
-}
+  .story-card-greece::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13,13,13,0.5);
+    z-index: 1;
+  }
 
-.story-card-greece span {
-  font-size: 1.5rem;
-  display: inline-block;
-  margin-bottom: 0.75rem;
-}
+  .story-card-greece .card-content {
+    position: relative;
+    z-index: 2;
+  }
 
-.story-card-greece h3 {
-  margin-bottom: 0.5rem;
-}
-  /* .story-card-greece {  border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; } */
+  .story-card-greece span {
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+  }
+
+  .story-card-greece h3 { margin-bottom: 0.5rem; }
   .story-icon { font-size: 1.5rem; margin-bottom: 0.75rem; display: block; }
 
   /* TIMELINE / VALUES */
@@ -174,7 +168,7 @@
   .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1.5rem; }
   .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem; transition: border-color 0.2s; }
   .value-card:hover { border-color: rgba(249,115,22,0.3); }
-  .value-card-greece { /* Set the background image and cover the full card */ background: url('greek-flag.png') no-repeat center center; background-size: cover; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem;  transition: border-color 0.2s, transform 0.2s; /* Added smooth transition */ }
+  .value-card-greece { background: url('greek-flag.png') no-repeat center center; background-size: cover; border: 1px solid var(--border); border-radius: var(--radius); padding: 1.4rem;  transition: border-color 0.2s, transform 0.2s; }
   .value-card-greece:hover { border-color: rgba(249,115,22,0.3); }
   .value-num { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; color: var(--accent); opacity: 0.4; line-height: 1; margin-bottom: 0.5rem; }
   .value-title { font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
@@ -298,11 +292,6 @@
         <p data-i18n="about_story_p3">Prices include 24% Greek VAT and reflect what you'd actually pay locally...</p>
       </div>
     </div>
-    <!-- <div class="story-card-greece">
-      <span>🇬🇷</span>
-      <h3 data-i18n="about_story_h3">Made for the Greek market</h3>
-      <p data-i18n="about_story_p3">Prices include 24% Greek VAT and reflect what you'd actually pay locally...</p>
-    </div> -->
     <div class="story-card">
       <span>📚</span>
       <h3 data-i18n="about_story_h4">Plain language, real knowledge</h3>
@@ -364,6 +353,7 @@
 <footer>
   <p>betterPC &copy; 2026 &mdash; <a href="index.html" style="color:var(--accent);text-decoration:none;" data-i18n="footer_back">Guide</a> &middot; <a href="build.html" style="color:var(--accent);text-decoration:none;" data-i18n="nav_build">Build</a> &middot; <a href="about.html" style="color:var(--accent);text-decoration:none;" data-i18n="footer_about">About</a></p>
 </footer>
+
 <script>
   // Active nav highlight on scroll
   const sections = document.querySelectorAll('section[id], header.hero');
@@ -387,329 +377,115 @@
   // 1. Multi-language Translation dictionary matrix
   const dictionary = {
     en: {
-      // Shared Navigation & Footer
-      nav_formats: "Formats",
-      nav_ram: "RAM",
-      nav_storage: "Storage",
-      nav_cpu: "CPU",
-      nav_build: "Build",
-      nav_about: "About us",
-      nav_back: "← Back to Guide",
-      footer_back: "Guide",
-      footer_about: "About",
-
-      // Tags
-      tag_pc_builder: "PC builder",
-      tag_hardware_nerd: "Hardware nerd",
-      tag_ddr2_survivor: "DDR2 survivor",
-      tag_greek_market: "Greek market",
-      tag_open_source: "Open source",
-
-      // Hero Section
-      about_hero_eyebrow: "Who we are",
-      about_hero_title: "One person.<br>A <em>lot</em> of PCs.",
-      about_hero_desc: "betterPC is a one-person project born out of a simple frustration: <strong>too many people overpay for PCs they don't understand</strong>, or throw away perfectly good old hardware because nobody told them it could run just fine.<br><br>Whether you're building a brand-new gaming rig or rescuing a DDR2 machine for a grandparent, this site has you covered.",
-      
-      // Creator Card
-      about_avatar_name: "The Creator",
-      about_avatar_role: "Founder · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>",
-      about_avatar_bio: "PC enthusiast, tinkerer, and recycler of old hardware. I've built everything from budget DDR2 office boxes to water-cooled gaming rigs — and I think everyone deserves to know what's inside their machine.",
-
-      // Story Section
-      about_story_eyebrow: "The story",
-      about_story_title: "Why better<span>PC</span> exists",
-      about_story_h1: "The problem with old hardware",
-      about_story_p1: "Greece has millions of PCs from the 2006–2015 era sitting in storage...",
-      about_story_h2: "The build configurator",
-      about_story_p2: "No other Greek PC guide covers DDR2 and DDR3 platforms...",
-      about_story_h3: "Made for the Greek market",
-      about_story_p3: "Prices include 24% Greek VAT and reflect what you'd actually pay locally...",
-      about_story_h4: "Plain language, real knowledge",
-      about_story_p4: "No jargon without explanation. Every guide on this site is written...",
-
-      // Principles Section
-      about_values_eyebrow: "Principles",
-      about_values_title: "What better<span style='color: #ff7a00;'>PC</span> stands for",
-      about_v1_title: "Honest pricing",
-      about_v1_desc: "Prices are estimates, labelled as such. No inflated numbers to make builds look cheap by comparison.",
-      about_v2_title: "No ads, no affiliates",
-      about_v2_desc: "betterPC earns nothing from recommending specific brands. Picks are based on value and availability.",
-      about_v3_title: "Old hardware matters",
-      about_v3_desc: "DDR2 and DDR3 machines can still serve real purposes. Helping people get more life from them is worth it.",
-      about_v4_title: "Compatibility first",
-      about_v4_desc: "Nothing is recommended without a check. CPU–mobo–RAM compatibility is flagged before you waste money.",
-      about_v5_title: "Greek context",
-      about_v5_desc: "Prices, availability, and part advice are grounded in the Greek and broader EU market, not the US.",
-      about_v6_title: "Always improving",
-      about_v6_desc: "Parts lists, prices, and guides are updated as the market changes. This isn't a set-and-forget site.",
-
-      // CTA
-      about_cta_title: "Ready to build?",
-      about_cta_desc: "Use the configurator to price out your next PC — brand new, budget, or full legacy.",
-      about_cta_btn_primary: "🛠️ Open PC Configurator"
+      nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Storage", nav_cpu: "CPU", nav_build: "Build", nav_about: "About us", nav_back: "← Back to Guide", footer_back: "Guide", footer_about: "About",
+      tag_pc_builder: "PC builder", tag_hardware_nerd: "Hardware nerd", tag_ddr2_survivor: "DDR2 survivor", tag_greek_market: "Greek market", tag_open_source: "Open source",
+      about_hero_eyebrow: "Who we are", about_hero_title: "One person.<br>A <em>lot</em> of PCs.", about_hero_desc: "betterPC is a one-person project born out of a simple frustration: <strong>too many people overpay for PCs they don't understand</strong>, or throw away perfectly good old hardware because nobody told them it could run just fine.<br><br>Whether you're building a brand-new gaming rig or rescuing a DDR2 machine for a grandparent, this site has you covered.",
+      about_avatar_name: "The Creator", about_avatar_role: "Founder · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>", about_avatar_bio: "PC enthusiast, tinkerer, and recycler of old hardware. I've built everything from budget DDR2 office boxes to water-cooled gaming rigs — and I think everyone deserves to know what's inside their machine.",
+      about_story_eyebrow: "The story", about_story_title: "Why better<span>PC</span> exists", about_story_h1: "The problem with old hardware", about_story_p1: "Greece has millions of PCs from the 2006–2015 era sitting in storage...", about_story_h2: "The build configurator", about_story_p2: "No other Greek PC guide covers DDR2 and DDR3 platforms...", about_story_h3: "Made for the Greek market", about_story_p3: "Prices include 24% Greek VAT and reflect what you'd actually pay locally...", about_story_h4: "Plain language, real knowledge", about_story_p4: "No jargon without explanation. Every guide on this site is written...",
+      about_values_eyebrow: "Principles", about_values_title: "What better<span style='color: #ff7a00;'>PC</span> stands for", about_v1_title: "Honest pricing", about_v1_desc: "Prices are estimates, labelled as such. No inflated numbers to make builds look cheap by comparison.", about_v2_title: "No ads, no affiliates", about_v2_desc: "betterPC earns nothing from recommending specific brands. Picks are based on value and availability.", about_v3_title: "Old hardware matters", about_v3_desc: "DDR2 and DDR3 machines can still serve real purposes. Helping people get more life from them is worth it.", about_v4_title: "Compatibility first", about_v4_desc: "Nothing is recommended without a check. CPU–mobo–RAM compatibility is flagged before you waste money.", about_v5_title: "Greek context", about_v5_desc: "Prices, availability, and part advice are grounded in the Greek and broader EU market, not the US.", about_v6_title: "Always improving", about_v6_desc: "Parts lists, prices, and guides are updated as the market changes. This isn't a set-and-forget site.",
+      about_cta_title: "Ready to build?", about_cta_desc: "Use the configurator to price out your next PC — brand new, budget, or full legacy.", about_cta_btn_primary: "🛠️ Open PC Configurator"
     },
     el: {
-      // Shared Navigation & Footer
-      nav_formats: "Κατηγορίες",
-      nav_ram: "RAM",
-      nav_storage: "Αποθήκευση",
-      nav_cpu: "CPU",
-      nav_build: "Στήσιμο PC",
-      nav_about: "Σχετικά με εμάς",
-      nav_back: "← Πίσω στον Οδηγό",
-      footer_back: "Οδηγός",
-      footer_about: "Σχετικά",
-
-      // Tags
-      tag_pc_builder: "PC builder",
-      tag_hardware_nerd: "Hardware nerd",
-      tag_ddr2_survivor: "DDR2 survivor",
-      tag_greek_market: "Ελληνική αγορά",
-      tag_open_source: "Open source",
-
-      // Hero Section
-      about_hero_eyebrow: "Ποιοι ειμαστε",
-      about_hero_title: "Ένας άνθρωπος.<br>Πολλά κομμάτια hardware.",
-      about_hero_desc: "Το betterPC είναι ένα ατομικό project που γεννήθηκε από μια απλή απογοήτευση: <strong>πάρα πολλοί άνθρωποι πληρώνουν υπερβολικά ποσά για υπολογιστές που δεν καταλαβαίνουν</strong>, ή πετάνε απόλυτα λειτουργικό παλιό hardware επειδή κανείς δεν τους είπε ότι μπορεί να αποδώσει μια χαρά.<br><br>Είτε χτίζετε ένα ολοκαίνουργιο gaming rig είτε ανασταίνετε ένα μηχάνημα DDR2 για τον παππού και τη γιαγιά, αυτό το site σας καλύπτει.",
-      
-      // Creator Card
-      about_avatar_name: "Ο Δημιουργός",
-      about_avatar_role: "Ιδρυτής · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>",
-      about_avatar_bio: "Λάτρης των PC, tinkerer και ανακυκλωτής παλιού υλικού. Έχω στήσει τα πάντα: από οικονομικά DDR2 κουτιά γραφείου μέχρι υδρόψυκτα gaming θηρία — και πιστεύω ότι όλοι αξίζουν να ξέρουν τι κρύβεται μέσα στο μηχάνημά τους.",
-
-      // Story Section
-      about_story_eyebrow: "Η ιστορια",
-      about_story_title: "Γιατι υπαρχει το better<span>PC</span>",
-      about_story_h1: "Το πρόβλημα με το παλιό hardware",
-      about_story_p1: "Η Ελλάδα έχει εκατομμύρια PC της περιόδου 2006–2015 ξεχασμένα σε αποθήκες...",
-      about_story_h2: "Ο διαμορφωτής συστήματος",
-      about_story_p2: "Κανένας άλλος ελληνικός οδηγός PC δεν καλύπτει πλατφόρμες DDR2 και DDR3...",
-      about_story_h3: "Φτιαγμένο για την ελληνική αγορά",
-      about_story_p3: "Οι τιμές περιλαμβάνουν 24% ΦΠΑ και αντικατοπτρίζουν τι θα πληρώσετε πραγματικά εδώ...",
-      about_story_h4: "Απλή γλώσσα, ουσιαστική γνώση",
-      about_story_p4: "Καμία ορολογία χωρίς επεξήγηση. Κάθε οδηγός σε αυτόν τον ιστότοπο είναι γραμμένος...",
-
-      // Principles Section
-      about_values_eyebrow: "Αρχες",
-      about_values_title: "Τι πρεσβευει το better<span style='color: #ff7a00;'>PC</span>",
-      about_v1_title: "Ειλικρινείς τιμές",
-      about_v1_desc: "Οι τιμές είναι εκτιμήσεις και επισημαίνονται ως τέτοιες. Όχι φουσκωμένα νούμερα απλά για να φαίνονται οι συνθέσεις φθηνές.",
-      about_v2_title: "Χωρίς διαφημίσεις ή affiliates",
-      about_v2_desc: "Το betterPC δεν κερδίζει τίποτα από την πρόταση συγκεκριμένων εταιρειών. Οι επιλογές βασίζονται στην αξία και τη διαθεσιμότητα.",
-      about_v3_title: "Το παλιό hardware έχει αξία",
-      about_v3_desc: "Τα μηχανήματα DDR2 και DDR3 μπορούν ακόμα να εξυπηρετήσουν πραγματικές ανάγκες. Αξίζει να βοηθάμε τον κόσμο να τους δώσει ζωή.",
-      about_v4_title: "Προτεραιότητα στη συμβατότητα",
-      about_v4_desc: "Τίποτα δεν προτείνεται χωρίς έλεγχο. Η συμβατότητα CPU–μητρικής–RAM ελέγχεται προτού σπαταλήσετε χρήματα.",
-      about_v5_title: "Ελληνική πραγματικότητα",
-      about_v5_desc: "Οι τιμές, η διαθεσιμότητα και οι συμβουλές εξαρτημάτων βασίζονται στην ελληνική και ευρύτερη ευρωπαϊκή αγορά, όχι των ΗΠΑ.",
-      about_v6_title: "Συνεχής βελτίωση",
-      about_v6_desc: "Οι λίστες ανταλλακτικών, οι τιμές και οι οδηγοί ενημερώνονται καθώς αλλάζει η αγορά. Δεν είναι ένα παρατημένο site.",
-
-      // CTA
-      about_cta_title: "Είστε έτοιμοι για το στήσιμο;",
-      about_cta_desc: "Χρησιμοποιήστε τον διαμορφωτή για να υπολογίσετε το κόστος του επόμενου PC σας — καινούργιο, οικονομικό ή legacy.",
-      about_cta_btn_primary: "🛠️ Άνοιγμα Διαμορφωτή PC"
+      nav_formats: "Κατηγορίες", nav_ram: "RAM", nav_storage: "Αποθήκευση", nav_cpu: "CPU", nav_build: "Στήσιμο PC", nav_about: "Σχετικά με εμάς", nav_back: "← Πίσω στον Οδηγό", footer_back: "Οδηγός", footer_about: "Σχετικά",
+      tag_pc_builder: "PC builder", tag_hardware_nerd: "Hardware nerd", tag_ddr2_survivor: "DDR2 survivor", tag_greek_market: "Ελληνική αγορά", tag_open_source: "Open source",
+      about_hero_eyebrow: "Ποιοι ειμαστε", about_hero_title: "Ένας άνθρωπος.<br>Πολλά κομμάτια hardware.", about_hero_desc: "Το betterPC είναι ένα аτομικό project που γεννήθηκε από μια απλή απογοήτευση: <strong>πάρα πολλοί άνθρωποι πληρώνουν υπερβολικά ποσά για υπολογιστές που δεν καταλαβαίνουν</strong>, ή πετάνε απόλυта λειτουργικό παλιό hardware επειδή κανείς δεν τους είπε ότι μπορεί να αποδώσει μια χαρά.<br><br>Είτε χτίζετε ένα ολοκαίνουργιο gaming rig είτε ανασταίνετε ένα μηχάνημα DDR2 για τον παππού και τη γιαγιά, αυτό το site σας καλύπτει.",
+      about_avatar_name: "Ο Δημιουργός", about_avatar_role: "Ιδρυτής · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>", about_avatar_bio: "Λάτρης των PC, tinkerer και ανακυκλωτής παλιού υλικού. Έχω στήσει τα πάντα: από οικονομικά DDR2 κουτιά γραφείου μέχρι υδρόψυκτα gaming θηρία — και πιστεύω ότι όλοι αξίζουν να ξέρουν τι κρύβεται μέσα στο μηχάνημά τους.",
+      about_story_eyebrow: "Η ιστορια", about_story_title: "Γιατι υπαρχει το better<span>PC</span>", about_story_h1: "Το πρόβλημα με το παλιό hardware", about_story_p1: "Η Ελλάδα έχει εκατομμύρια PC της περιόδου 2006–2015 ξεχασμένα σε αποθήκες...", about_story_h2: "Ο διαμορφωτής συστήματος", about_story_p2: "Κανένας άλλος ελληνικός οδηγός PC δεν καλύπτει πλαтφόρμες DDR2 και DDR3...", about_story_h3: "Φτιαγμένο για την ελληνική αγορά", about_story_p3: "Οι τιμές περιλαμβάνουν 24% ΦΠΑ και αντικαтоπτρίζουν τι θα πληρώσετε πραγματικά εδώ...", about_story_h4: "Απλή γλώσσα, ουσιαστική γνώση", about_story_p4: "Καμία οроλογία χωρίς επεξήγηση. Κάθε οδηγός σε αυτόν τον ιστότοπο είναι γραμμένος...",
+      about_values_eyebrow: "Αρχες", about_values_title: "Τι πρεσβευει το better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Ειλικρινείς τιμές", about_v1_desc: "Οι τιμές είναι εκτιμήσεις και επισημαίνονται ως τέτοιες. Όχι φουσκωμένα νούμεра απλά για να φαίνονται οι συνθέσεις φθηνές.", about_v2_title: "Χωρίς διαφημίσεις ή affiliates", about_v2_desc: "Το betterPC δεν κερδίζει τίποта από την πρόταση συγκεκριμένων εταιρειών. Οι επιλογές βασίζονται στην αξία και τη διαθεσιμότητα.", about_v3_title: "Το παλιό hardware έχει αξία", about_v3_desc: "Τα μηχανήματα DDR2 και DDR3 μπορούν ακόμα να εξυπηρετήσουν πραγματικές ανάγκες. Αξίζει να βοηθάμε τον κόσмо να τους δώσει ζωή.", about_v4_title: "Προτεραιότητα στη συμβατότητα", about_v4_desc: "Τίποта δεν προтеίνεται χωρίς έλεγχο. Η συμβατότητα CPU–μητρικής–RAM ελέγχεται προτού σπαταλήσετε χρήματα.", about_v5_title: "Ελληνική πραγματικότητα", about_v5_desc: "Οι τιμές, η διαθεσιμότητα και οι συμβουλές εξαρτημάτων βασίζονται στην ελληνική και ευρύτερη ευρωπαϊκή αγορά, όχι των ΗΠΑ.", about_v6_title: "Συνεχής βелτίωση", about_v6_desc: "Οι λίστες ανταλλακτικών, οι τιμές και οι οδηγοί ενημερώνονται καθώς αλλάζει η αγορά. Δεν είναι ένα παρατημένο site.",
+      about_cta_title: "Είστε έτοιμοι για το στήσιμο;", about_cta_desc: "Χρησιμοποιήστε τον διαμορφωτή για να υπολογίσετε το κόστος του επόμενου PC σας — καινούργιο, οικονομικό ή legacy.", about_cta_btn_primary: "🛠️ Άνοιγμα Διαμορφωτή PC"
     },
     de: {
-      // Shared Navigation & Footer
-      nav_formats: "Formate",
-      nav_ram: "RAM",
-      nav_storage: "Speicher",
-      nav_cpu: "CPU",
-      nav_build: "PC Bauen",
-      nav_about: "Über uns",
-      nav_back: "← Zurück zum Leitfaden",
-      footer_back: "Leitfaden",
-      footer_about: "Über uns",
-
-      // Tags
-      tag_pc_builder: "PC-Builder",
-      tag_hardware_nerd: "Hardware-Nerd",
-      tag_ddr2_survivor: "DDR2-Überlebender",
-      tag_greek_market: "Griechischer Markt",
-      tag_open_source: "Open-Source",
-
-      // Hero Section
-      about_hero_eyebrow: "Wer wir sind",
-      about_hero_title: "Eine Person.<br>Viele PCs.",
-      about_hero_desc: "betterPC ist ein Ein-Personen-Projekt, das aus einer einfachen Frustration heraus entstanden ist: <strong>Zu viele Menschen zahlen zu viel für PCs, die sie nicht verstehen</strong>, oder werfen perfekt funktionierende alte Hardware weg, weil ihnen niemand gesagt hat, dass sie noch einwandfrei laufen würde.<br><br>Egal, ob Sie einen brandneuen Gaming-Rig bauen oder eine DDR2-Maschine für die Großeltern retten, diese Website hilft Ihnen weiter.",
-
-      // Creator Card
-      about_avatar_name: "Der Ersteller",
-      about_avatar_role: "Gründer · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>",
-      about_avatar_bio: "PC-Enthusiast, Bastler und Recycler alter Hardware. Ich habe alles gebaut, von günstigen DDR2-Büroboxen bis hin zu wassergekühlten Gaming-Rigs – und ich finde, jeder sollte wissen, was in seiner Maschine steckt.",
-
-      // Story Section
-      about_story_eyebrow: "Die Geschichte",
-      about_story_title: "Warum es better<span>PC</span> gibt",
-      about_story_h1: "Das Problem mit alter Hardware",
-      about_story_p1: "Griechenland hat Millionen von PCs aus den Jahren 2006–2015 ungenutzt in Lagern liegen...",
-      about_story_h2: "Der Build-Konfigurator",
-      about_story_p2: "Kein anderer griechischer PC-Leitfaden deckt DDR2- und DDR3-Plattformen ab...",
-      about_story_h3: "Für den griechischen Markt gemacht",
-      about_story_p3: "Die Preise enthalten 24% griechische MwSt. und entsprechen dem, was Sie vor Ort zahlen...",
-      about_story_h4: "Klare Sprache, echtes Wissen",
-      about_story_p4: "Kein Fachjargon ohne Erklärung. Jeder Leitfaden auf dieser Website ist so geschrieben...",
-
-      // Principles Section
-      about_values_eyebrow: "Prinzipien",
-      about_values_title: "Wofür better<span style='color: #ff7a00;'>PC</span> steht",
-      about_v1_title: "Ehrliche Preise",
-      about_v1_desc: "Preise sind Schätzungen und als solche gekennzeichnet. Keine künstlich niedrigen Zahlen, um Builds billig wirken zu lassen.",
-      about_v2_title: "Keine Werbung, keine Affiliates",
-      about_v2_desc: "betterPC verdient nichts an Empfehlungen bestimmter Marken. Die Auswahl basiert auf Nutzen und Verfügbarkeit.",
-      about_v3_title: "Alte Hardware zählt",
-      about_v3_desc: "DDR2- und DDR3-Systeme können immer noch nützliche Dienste leisten. Es lohnt sich, ihnen neues Leben einzuhauchen.",
-      about_v4_title: "Kompatibilität zuerst",
-      about_v4_desc: "Nichts wird ohne Prüfung empfohlen. Die CPU-Mainboard-RAM-Kompatibilität wird geprüft, bevor Sie Geld verschwenden.",
-      about_v5_title: "Griechischer Kontext",
-      about_v5_desc: "Preise, Verfügbarkeit und Ratschläge basieren auf dem griechischen und EU-Markt, nicht auf den USA.",
-      about_v6_title: "Ständige Verbesserung",
-      about_v6_desc: "Teilelisten, Preise und Leitfäden werden aktualisiert, wenn sich der Markt ändert. Keine verwaiste Seite.",
-
-      // CTA
-      about_cta_title: "Bereit zum Bauen?",
-      about_cta_desc: "Nutzen Sie den Konfigurator, um Ihren nächsten PC zu planen – brandneu, Budget oder klassisches Legacy-System.",
-      about_cta_btn_primary: "🛠️ PC-Konfigurator öffnen"
+      nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Speicher", nav_cpu: "CPU", nav_build: "PC Bauen", nav_about: "Über uns", nav_back: "← Zurück zum Leitfaden", footer_back: "Leitfaden", footer_about: "Über uns",
+      tag_pc_builder: "PC-Builder", tag_hardware_nerd: "Hardware-Nerd", tag_ddr2_survivor: "DDR2-Überlebender", tag_greek_market: "Griechischer Markt", tag_open_source: "Open-Source",
+      about_hero_eyebrow: "Wer wir sind", about_hero_title: "Eine Person.<br>Viele PCs.", about_hero_desc: "betterPC ist ein Ein-Personen-Projekt, das aus einer einfachen Frustration heraus entstanden ist: <strong>Zu viele Menschen zahlen zu viel für PCs, die sie nicht verstehen</strong>, oder werfen perfekt funktionierende alte Hardware weg, weil ihnen niemand gesagt hat, dass sie noch einwandfrei laufen würde.<br><br>Egal, ob Sie einen brandneuen Gaming-Rig bauen oder eine DDR2-Maschine für die Großeltern retten, diese Website hilft Ihnen weiter.",
+      about_avatar_name: "Der Ersteller", about_avatar_role: "Gründer · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>", about_avatar_bio: "PC-Enthusiast, Bastler und Recycler alter Hardware. Ich habe alles gebaut, von günstigen DDR2-Büroboxen bis hin zu wassergekühlten Gaming-Rigs – und ich finde, jeder sollte wissen, was in seiner Maschine steckt.",
+      about_story_eyebrow: "Die Geschichte", about_story_title: "Warum es better<span>PC</span> gibt", about_story_h1: "Das Problem mit alter Hardware", about_story_p1: "Griechenland hat Millionen von PCs aus den Jahren 2006–2015 ungenutzt in Lagern liegen...", about_story_h2: "Der Build-Konfigurator", about_story_p2: "Kein anderer griechischer PC-Leitfaden deckt DDR2- und DDR3-Plattformen ab...", about_story_h3: "Für den griechischen Markt gemacht", about_story_p3: "Die Preise enthalten 24% griechische MwSt. und entsprechen dem, was Sie vor Ort zahlen...", about_story_h4: "Klare Sprache, echtes Wissen", about_story_p4: "Kein Fachjargon ohne Erklärung. Jeder Leitfaden auf dieser Website ist so geschrieben...",
+      about_values_eyebrow: "Prinzipien", about_values_title: "Wofür better<span style='color: #ff7a00;'>PC</span> steht", about_v1_title: "Ehrliche Preise", about_v1_desc: "Preise sind Schätzungen und als solche gekennzeichnet. Keine künstlich niedrigen Zahlen, um Builds billig wirken zu lassen.", about_v2_title: "Keine Werbung, keine Affiliates", about_v2_desc: "betterPC verdient nichts an Empfehlungen bestimmter Marken. Die Auswahl basiert auf Nutzen und Verfügbarkeit.", about_v3_title: "Alte Hardware zählt", about_v3_desc: "DDR2- und DDR3-Systeme können immer noch nützliche Dienste leisten. Es lohnt sich, ihnen neues Leben einzuhauchen.", about_v4_title: "Kompatibilität zuerst", about_v4_desc: "Nichts wird ohne Prüfung empfohlen. Die CPU-Mainboard-RAM-Kompatibilität wird geprüft, bevor Sie Geld verschwenden.", about_v5_title: "Griechischer Kontext", about_v5_desc: "Preise, Verfügbarkeit und Ratschläge basieren auf dem griechischen und EU-Markt, not auf den USA.", about_v6_title: "Ständige Verbesserung", about_v6_desc: "Teilelisten, Preise und Leitfäden werden aktualisiert, wenn sich der Markt ändert. Keine verwaiste Seite.",
+      about_cta_title: "Bereit zum Bauen?", about_cta_desc: "Nutzen Sie den Konfigurator, um Ihren nächsten PC zu planen – brandneu, Budget oder klassisches Legacy-System.", about_cta_btn_primary: "🛠️ PC-Konfigurator öffnen"
     },
     es: {
-      // Shared Navigation & Footer
-      nav_formats: "Formatos",
-      nav_ram: "RAM",
-      nav_storage: "Almacenamiento",
-      nav_cpu: "CPU",
-      nav_build: "Configurar PC",
-      nav_about: "Sobre nosotros",
-      nav_back: "← Volver a la Guía",
-      footer_back: "Guía",
-      footer_about: "Acerca de",
-
-      // Tags
-      tag_pc_builder: "Montador de PC",
-      tag_hardware_nerd: "Nerd del hardware",
-      tag_ddr2_survivor: "Superviviente DDR2",
-      tag_greek_market: "Mercado griego",
-      tag_open_source: "Código abierto",
-
-      // Hero Section
-      about_hero_eyebrow: "Quiénes somos",
-      about_hero_title: "Una persona.<br>Muchos ordenadores.",
-      about_hero_desc: "betterPC es un proyecto unipersonal nacido de una frustración simple: <strong>mucha gente paga de más por ordenadores que no entiende</strong>, o desecha hardware antiguo perfectamente funcional porque nadie les dijo que podía rendir bien.<br><br>Ya sea que estés montando un equipo de juegos nuevo o rescatando una máquina DDR2 para tus abuelos, este sitio te ayuda.",
-
-      // Creator Card
-      about_avatar_name: "El Creador",
-      about_avatar_role: "Fundador · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>",
-      about_avatar_bio: "Entusiasta de la informática, reparador y reciclador de hardware antiguo. He montado de todo, desde cajas de oficina DDR2 económicas hasta equipos gaming refrigerados por agua, y creo que todos merecen saber qué hay dentro de su máquina.",
-
-      // Story Section
-      about_story_eyebrow: "La historia",
-      about_story_title: "Por qué existe better<span>PC</span>",
-      about_story_h1: "El problema del hardware antiguo",
-      about_story_p1: "Grecia tiene millones de PC de la era 2006–2015 acumulando polvo en almacenes...",
-      about_story_h2: "El configurador de equipos",
-      about_story_p2: "Ninguna otra guía de PC en Grecia cubre plataformas de legado DDR2 y DDR3...",
-      about_story_h3: "Hecho para el mercado griego",
-      about_story_p3: "Los precios incluyen el 24% de IVA griego y reflejan lo que realmente pagarías a nivel local...",
-      about_story_h4: "Lenguaje sencillo, conocimiento real",
-      about_story_p4: "Sin tecnicismos innecesarios sin explicación. Cada guía en este sitio está escrita...",
-
-      // Principles Section
-      about_values_eyebrow: "Principios",
-      about_values_title: "Lo que defiende better<span style='color: #ff7a00;'>PC</span>",
-      about_v1_title: "Precios honestos",
-      about_v1_desc: "Los precios son estimaciones y se marcan como tales. No inflamos números para hacer que los montajes parezcan baratos.",
-      about_v2_title: "Sin anuncios ni afiliados",
-      about_v2_desc: "betterPC no gana nada recomendando marcas específicas. Las elecciones se basan en el valor y disponibilidad real.",
-      about_v3_title: "El hardware antiguo importa",
-      about_v3_desc: "Las máquinas DDR2 y DDR3 aún pueden cumplir propósitos reales. Ayudar a la gente a darles más vida vale la pena.",
-      about_v4_title: "Compatibilidad primero",
-      about_v4_desc: "No se recomienda nada sin una verificación previa. La comodidad de la compatibilidad CPU–placa–RAM se analiza antes de que gastes dinero.",
-      about_v5_title: "Contexto griego",
-      about_v5_desc: "Los precios, la disponibilidad y los consejos de componentes se basan en el mercado griego y de la UE, no en el de EE. UU.",
-      about_v6_title: "Mejora continua",
-      about_v6_desc: "Las listas de piezas, precios y guías se actualizan a medida que cambia el mercado. Este no es un sitio web abandonado.",
-
-      // CTA
-      about_cta_title: "¿Listo para montar?",
-      about_cta_desc: "Usa el configurador para calcular el precio de tu próximo PC: nuevo, económico o de legado completo.",
-      about_cta_btn_primary: "🛠️ Abrir Configurador de PC"
+      nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Almacenamiento", nav_cpu: "CPU", nav_build: "Configurar PC", nav_about: "Sobre nosotros", nav_back: "← Volver a la Guía", footer_back: "Guía", footer_about: "Acerca de",
+      tag_pc_builder: "Montador de PC", tag_hardware_nerd: "Nerd del hardware", tag_ddr2_survivor: "Superviviente DDR2", tag_greek_market: "Mercado griego", tag_open_source: "Código abierto",
+      about_hero_eyebrow: "Quiénes somos", about_hero_title: "Una persona.<br>Muchos ordenadores.", about_hero_desc: "betterPC es un proyecto unipersonal nacido de una frustración simple: <strong>mucha gente paga de más por ordenadores que no entiende</strong>, o desecha hardware antiguo perfectamente funcional porque nadie les dijo que podía rendir bien.<br><br>Ya sea que estés montando un equipo de juegos nuevo o rescatando una máquina DDR2 para tus abuelos, este sitio te ayuda.",
+      about_avatar_name: "El Creador", about_avatar_role: "Fundador · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>", about_avatar_bio: "Entusiasta de la informática, reparador y reciclador de hardware antiguo. He montado de todo, desde cajas de oficina DDR2 económicas hasta equipos gaming refrigerados por agua, y creo que todos merecen saber qué hay dentro de su máquina.",
+      about_story_eyebrow: "La historia", about_story_title: "Por qué existe better<span>PC</span>", about_story_h1: "El problema del hardware antiguo", about_story_p1: "Grecia tiene millones de PC de la era 2006–2015 acumulando polvo en almacenes...", about_story_h2: "El configurador de equipos", about_story_p2: "Ninguna otra guía de PC en Grecia cubre plataformas de legado DDR2 y DDR3...", about_story_h3: "Hecho para el mercado griego", about_story_p3: "Los precios incluyen el 24% de IVA griego y reflejan lo que realmente pagarías a nivel local...", about_story_h4: "Lenguaje sencillo, conocimiento real", about_story_p4: "Sin tecnicismos innecesarios sin explicación. Cada guía en este sitio está escrita...",
+      about_values_eyebrow: "Principios", about_values_title: "Lo que defiende better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Precios honestos", about_v1_desc: "Los precios son estimaciones y se marcan como tales. No inflamos números para hacer que los montajes parezcan baratos.", about_v2_title: "Sin anuncios ni afiliados", about_v2_desc: "betterPC no gana nada recomendando marcas específicas. Las elecciones se basan en el valor y disponibilidad real.", about_v3_title: "El hardware antiguo importa", about_v3_desc: "Las máquinas DDR2 y DDR3 aún pueden cumplir propósitos reales. Ayudar a la gente a darles más vida vale la pena.", about_v4_title: "Compatibilidad primero", about_v4_desc: "No se recomienda nada sin una verificación previa. La comodidad de la compatibilidad CPU–placa–RAM se analiza antes de que gastes dinero.", about_v5_title: "Contexto griego", about_v5_desc: "Los precios, la disponibilidad y los consejos de componentes se basan en el mercado griego y de la UE, no en el de EE. UU.", about_v6_title: "Mejora continua", about_v6_desc: "Las listas de piezas, precios y guías se actualizan a medida que cambia el mercado. Este no es un sitio web abandonado.",
+      about_cta_title: "¿Listo para montar?", about_cta_desc: "Usa el configurador para calcular el precio de tu próximo PC: nuevo, económico o de legado completo.", about_cta_btn_primary: "🛠️ Abrir Configurador de PC"
     },
-   // Add these to your existing dictionary object
-fr: {
-  nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Stockage", nav_cpu: "CPU", nav_build: "Construire", nav_about: "À propos", nav_back: "← Retour au guide", footer_back: "Guide", footer_about: "À propos",
-  tag_pc_builder: "Monteur PC", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Survivant DDR2", tag_greek_market: "Marché grec", tag_open_source: "Open source",
-  about_hero_eyebrow: "Qui sommes-nous", about_hero_title: "Une personne.<br>Beaucoup <em>de</em> PC.", about_hero_desc: "betterPC est un projet solo né d'une frustration simple : <strong>trop de gens paient trop cher pour des PC qu'ils ne comprennent pas</strong>, ou jettent du vieux matériel parfaitement fonctionnel. <br><br>Que vous montiez une machine de jeu flambant neuve ou que vous sauviez un PC DDR2, ce site est là pour vous.",
-  about_avatar_name: "Le Créateur", about_avatar_role: "Fondateur · betterPC", about_avatar_bio: "Passionné de PC et adepte du recyclage matériel. J'ai tout construit, des boîtiers de bureau DDR2 aux rigs de jeu refroidis par eau.",
-  about_story_eyebrow: "L'histoire", about_story_title: "Pourquoi better<span>PC</span> existe", about_story_h1: "Le problème du vieux matériel", about_story_p1: "La Grèce a des millions de PC de l'ère 2006-2015 oubliés dans des entrepôts...", about_story_h2: "Le configurateur", about_story_p2: "Aucun autre guide grec ne couvre les plateformes DDR2 et DDR3...", about_story_h3: "Pour le marché grec", about_story_p3: "Les prix incluent 24% de TVA grecque...", about_story_h4: "Langage simple", about_story_p4: "Pas de jargon inutile. Chaque guide est écrit pour être compris...",
-  about_values_eyebrow: "Principes", about_values_title: "Ce que défend better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prix honnêtes", about_v1_desc: "Estimations transparentes sans chiffres gonflés.", about_v2_title: "Sans pub ni affiliation", about_v2_desc: "Aucune commission sur les marques recommandées.", about_v3_title: "Le vieux matériel compte", about_v3_desc: "Donner une seconde vie aux machines DDR2/DDR3 en vaut la peine.", about_v4_title: "Compatibilité avant tout", about_v4_desc: "Vérification systématique CPU-mobo-RAM.", about_v5_title: "Contexte grec", about_v5_desc: "Basé sur le marché local et européen.", about_v6_title: "Amélioration continue", about_v6_desc: "Mises à jour constantes selon l'évolution du marché.",
-  about_cta_title: "Prêt à construire ?", about_cta_desc: "Utilisez le configurateur pour chiffrer votre prochain PC.", about_cta_btn_primary: "🛠️ Ouvrir le configurateur"
-},
-ru: {
-  nav_formats: "Форматы", nav_ram: "RAM", nav_storage: "Хранилище", nav_cpu: "CPU", nav_build: "Сборка", nav_about: "О нас", nav_back: "← Назад к гиду", footer_back: "Гид", footer_about: "О нас",
-  tag_pc_builder: "Сборщик ПК", tag_hardware_nerd: "Железячник", tag_ddr2_survivor: "Выживший DDR2", tag_greek_market: "Греческий рынок", tag_open_source: "Open source",
-  about_hero_eyebrow: "Кто мы", about_hero_title: "Один человек.<br>Много <em>ПК</em>.", about_hero_desc: "betterPC — это проект одного человека, рожденный из простой мысли: <strong>многие переплачивают за ПК, которых не понимают</strong>, или выбрасывают хорошее старое железо. <br><br>Собираете ли вы мощный игровой ПК или спасаете старый DDR2 — этот сайт поможет.",
-  about_avatar_name: "Создатель", about_avatar_role: "Основатель · betterPC", about_avatar_bio: "Энтузиаст ПК и мастер по восстановлению старого железа. Собирал всё: от бюджетных офисных DDR2 до мощных игровых систем.",
-  about_story_eyebrow: "История", about_story_title: "Почему существует better<span>PC</span>", about_story_h1: "Проблема старого железа", about_story_p1: "В Греции миллионы ПК 2006–2015 годов пылятся на складах...", about_story_h2: "Конфигуратор сборки", about_story_p2: "Ни один другой греческий гайд не охватывает DDR2 и DDR3...", about_story_h3: "Для греческого рынка", about_story_p3: "Цены включают греческий НДС 24%...", about_story_h4: "Простой язык", about_story_p4: "Никакого сложного жаргона. Только понятные инструкции...",
-  about_values_eyebrow: "Принципы", about_values_title: "Что отстаивает better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Честные цены", about_v1_desc: "Реальные оценки без искусственного завышения.", about_v2_title: "Без рекламы и партнерок", about_v2_desc: "Мы не зарабатываем на рекомендациях брендов.", about_v3_title: "Старое железо важно", about_v3_desc: "Машины на DDR2/DDR3 всё ещё могут приносить пользу.", about_v4_title: "Совместимость прежде всего", about_v4_desc: "Всегда проверяем связки CPU-плата-RAM.", about_v5_title: "Греческий контекст", about_v5_desc: "Цены и советы основаны на местном рынке.", about_v6_title: "Постоянное улучшение", about_v6_desc: "Гайды обновляются вслед за рынком.",
-  about_cta_title: "Готовы к сборке?", about_cta_desc: "Используйте конфигуратор для расчета стоимости вашего ПК.", about_cta_btn_primary: "🛠️ Открыть конфигуратор"
-},
-it: {
-  nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Archivio", nav_cpu: "CPU", nav_build: "Assembla", nav_about: "Chi siamo", nav_back: "← Torna alla Guida", footer_back: "Guida", footer_about: "Chi siamo",
-  tag_pc_builder: "Assemblatore PC", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Sopravvissuto DDR2", tag_greek_market: "Mercato greco", tag_open_source: "Open source",
-  about_hero_eyebrow: "Chi siamo", about_hero_title: "Una persona.<br>Tanti <em>PC</em>.", about_hero_desc: "betterPC è un progetto individuale nato da una frustrazione: <strong>molti pagano troppo per PC che non comprendono</strong>, o buttano hardware vecchio ancora perfettamente funzionante. <br><br>Che tu stia assemblando un PC da gaming o salvando una vecchia macchina DDR2, questo sito fa per te.",
-  about_avatar_name: "Il Creatore", about_avatar_role: "Fondatore · betterPC", about_avatar_bio: "Appassionato di PC e riciclatore di hardware. Ho costruito di tutto, dai PC ufficio DDR2 alle macchine da gioco a liquido.",
-  about_story_eyebrow: "La storia", about_story_title: "Perché esiste better<span>PC</span>", about_story_h1: "Il problema dell'hardware vecchio", about_story_p1: "In Grecia ci sono milioni di PC del 2006-2015 dimenticati in magazzino...", about_story_h2: "Il configuratore", about_story_p2: "Nessun'altra guida greca copre le piattaforme DDR2 e DDR3...", about_story_h3: "Per il mercato greco", about_story_p3: "I prezzi includono l'IVA greca al 24%...", about_story_h4: "Linguaggio semplice", about_story_p4: "Nessun gergo senza spiegazione. Guide scritte per tutti...",
-  about_values_eyebrow: "Principi", about_values_title: "I valori di better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prezzi onesti", about_v1_desc: "Stime trasparenti, mai gonfiate.", about_v2_title: "Niente pubblicità o affiliate", about_v2_desc: "Nessun guadagno dai consigli sulle marche.", about_v3_title: "L'hardware vecchio conta", about_v3_desc: "Ridare vita alle macchine DDR2/DDR3 è importante.", about_v4_title: "Compatibilità prima di tutto", about_v4_desc: "Controllo rigoroso CPU-mobo-RAM.", about_v5_title: "Contesto greco", about_v5_desc: "Prezzi e consigli basati sul mercato locale.", about_v6_title: "Miglioramento costante", about_v6_desc: "Aggiornamenti continui basati sul mercato.",
-  about_cta_title: "Pronto ad assemblare?", about_cta_desc: "Usa il configuratore per il tuo prossimo PC.", about_cta_btn_primary: "🛠️ Apri configuratore"
-},
-sv: {
-  nav_formats: "Format", nav_ram: "RAM", nav_storage: "Lagring", nav_cpu: "CPU", nav_build: "Bygg", nav_about: "Om oss", nav_back: "← Tillbaka till guiden", footer_back: "Guide", footer_about: "Om oss",
-  tag_pc_builder: "PC-byggare", tag_hardware_nerd: "Hårdvarunörd", tag_ddr2_survivor: "DDR2-överlevare", tag_greek_market: "Grekiska marknaden", tag_open_source: "Öppen källkod",
-  about_hero_eyebrow: "Vilka vi är", about_hero_title: "En person.<br>Många <em>PC:s</em>.", about_hero_desc: "betterPC är ett soloprojekt född ur en enkel frustration: <strong>många betalar för mycket för datorer de inte förstår</strong>, eller slänger gammal hårdvara som fungerar utmärkt. <br><br>Oavsett om du bygger en speldator eller räddar en DDR2-maskin, hjälper denna sida dig.",
-  about_avatar_name: "Skaparen", about_avatar_role: "Grundare · betterPC", about_avatar_bio: "PC-entusiast och hårdvaruåtervinnare. Jag har byggt allt från enkla DDR2-kontorsmaskiner till avancerade vattenkylda gaming-datorer.",
-  about_story_eyebrow: "Historien", about_story_title: "Varför better<span>PC</span> finns", about_story_h1: "Problemet med gammal hårdvara", about_story_p1: "I Grekland finns miljontals PC från 2006-2015 i förråd...", about_story_h2: "Konfiguratorn", about_story_p2: "Ingen annan grekisk guide täcker DDR2 och DDR3...", about_story_h3: "För den grekiska marknaden", about_story_p3: "Priser inkluderar 24% grekisk moms...", about_story_h4: "Enkelt språk", about_story_p4: "Ingen krånglig jargon. Guider för alla...",
-  about_values_eyebrow: "Principer", about_values_title: "Vad better<span style='color: #ff7a00;'>PC</span> står för", about_v1_title: "Ärliga priser", about_v1_desc: "Transparenta estimat.", about_v2_title: "Inga annonser eller affiliates", about_v2_desc: "Vi tjänar ingenting på märkesrekommendationer.", about_v3_title: "Gammal hårdvara räknas", about_v3_desc: "Att ge liv åt DDR2/DDR3-maskiner är värdefullt.", about_v4_title: "Kompatibilitet först", about_v4_desc: "Koll av CPU-mobo-RAM innan köp.", about_v5_title: "Grekisk kontext", about_v5_desc: "Priser anpassade efter den lokala marknaden.", about_v6_title: "Ständig förbättring", about_v6_desc: "Uppdateras i takt med marknaden.",
-  about_cta_title: "Redo att bygga?", about_cta_desc: "Använd konfiguratorn för att prissätta din nästa PC.", about_cta_btn_primary: "🛠️ Öppna konfiguratorn"
-},
-pt: {
-  nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Armazenamento", nav_cpu: "CPU", nav_build: "Montar", nav_about: "Sobre nós", nav_back: "← Voltar ao Guia", footer_back: "Guia", footer_about: "Sobre",
-  tag_pc_builder: "Montador de PC", tag_hardware_nerd: "Nerd de hardware", tag_ddr2_survivor: "Sobrevivente DDR2", tag_greek_market: "Mercado grego", tag_open_source: "Código aberto",
-  about_hero_eyebrow: "Quem somos", about_hero_title: "Uma pessoa.<br>Muitos <em>PCs</em>.", about_hero_desc: "betterPC é um projeto solo nascido de uma frustração: <strong>muita gente paga demais por PCs que não entende</strong>, ou joga fora hardware antigo perfeito. <br><br>Seja montando um PC gamer novo ou resgatando uma máquina DDR2, este site é para você.",
-  about_avatar_name: "O Criador", about_avatar_role: "Fundador · betterPC", about_avatar_bio: "Entusiasta de PCs e reciclador de hardware. Construí de tudo, desde PCs DDR2 básicos até rigs de jogos resfriados a água.",
-  about_story_eyebrow: "A história", about_story_title: "Por que o better<span>PC</span> existe", about_story_h1: "O problema do hardware antigo", about_story_p1: "A Grécia tem milhões de PCs de 2006-2015 esquecidos em armazéns...", about_story_h2: "O configurador", about_story_p2: "Nenhum outro guia grego cobre plataformas DDR2 e DDR3...", about_story_h3: "Para o mercado grego", about_story_p3: "Preços incluem 24% de IVA grego...", about_story_h4: "Linguagem simples", about_story_p4: "Sem jargões sem explicação. Guias escritos para todos...",
-  about_values_eyebrow: "Princípios", about_values_title: "O que o better<span style='color: #ff7a00;'>PC</span> defende", about_v1_title: "Preços honestos", about_v1_desc: "Estimativas transparentes.", about_v2_title: "Sem anúncios ou afiliados", about_v2_desc: "Não ganhamos nada com marcas recomendadas.", about_v3_title: "Hardware antigo importa", about_v3_desc: "Dar vida a máquinas DDR2/DDR3 vale a pena.", about_v4_title: "Compatibilidade em primeiro lugar", about_v4_desc: "Verificação de CPU-placa-RAM rigorosa.", about_v5_title: "Contexto grego", about_v5_desc: "Preços e conselhos baseados no mercado local.", about_v6_title: "Melhoria contínua", about_v6_desc: "Guias atualizados com o mercado.",
-  about_cta_title: "Pronto para montar?", about_cta_desc: "Use o configurador para calcular seu próximo PC.", about_cta_btn_primary: "🛠️ Abrir configurador"
-},
-ro: {
-  nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Stocare", nav_cpu: "CPU", nav_build: "Construiește", nav_about: "Despre noi", nav_back: "← Înapoi la Ghid", footer_back: "Ghid", footer_about: "Despre",
-  tag_pc_builder: "PC builder", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Supraviețuitor DDR2", tag_greek_market: "Piața grecească", tag_open_source: "Open source",
-  about_hero_eyebrow: "Cine suntem", about_hero_title: "O singură persoană.<br>Multe <em>PC-uri</em>.", about_hero_desc: "betterPC este un proiect personal născut dintr-o frustrare: <strong>prea mulți oameni plătesc prea mult pentru calculatoare pe care nu le înțeleg</strong>, sau aruncă hardware vechi funcțional. <br><br>Fie că asamblezi un PC de gaming sau salvezi un sistem DDR2, acest site te ajută.",
-  about_avatar_name: "Creatorul", about_avatar_role: "Fondator · betterPC", about_avatar_bio: "Entuziast PC și pasionat de reciclare hardware. Am construit totul, de la sisteme DDR2 de birou până la PC-uri gaming complexe.",
-  about_story_eyebrow: "Povestea", about_story_title: "De ce există better<span>PC</span>", about_story_h1: "Problema hardware-ului vechi", about_story_p1: "Grecia are milioane de PC-uri din 2006-2015 uitate în depozite...", about_story_h2: "Configuratorul", about_story_p2: "Niciun alt ghid grecesc nu acoperă platformele DDR2 și DDR3...", about_story_h3: "Pentru piața grecească", about_story_p3: "Prețurile includ TVA-ul grecesc de 24%...", about_story_h4: "Limbaj simplu", about_story_p4: "Fără jargon inutil. Ghiduri scrise pentru oricine...",
-  about_values_eyebrow: "Principii", about_values_title: "Ce susține better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prețuri oneste", about_v1_desc: "Estimări transparente.", about_v2_title: "Fără reclame sau afilieri", about_v2_desc: "Nu câștigăm nimic din recomandări de branduri.", about_v3_title: "Hardware-ul vechi contează", about_v3_desc: "Să dai o nouă viață sistemelor DDR2/DDR3 merită.", about_v4_title: "Compatibilitatea pe primul loc", about_v4_desc: "Verificare CPU-placă de bază-RAM.", about_v5_title: "Context grecesc", about_v5_desc: "Prețuri și sfaturi bazate pe piața locală.", about_v6_title: "Îmbunătățire continuă", about_v6_desc: "Actualizări constante în funcție de piață.",
-  about_cta_title: "Gata de asamblare?", about_cta_desc: "Folosește configuratorul pentru a-ți calcula următorul PC.", about_cta_btn_primary: "🛠️ Deschide configuratorul"
-},
-pl: {
-  nav_formats: "Formaty", nav_ram: "RAM", nav_storage: "Pamięć", nav_cpu: "CPU", nav_build: "Buduj", nav_about: "O nas", nav_back: "← Wróć do poradnika", footer_back: "Poradnik", footer_about: "O nas",
-  tag_pc_builder: "Składacz PC", tag_hardware_nerd: "Hardware nerd", tag_ddr2_survivor: "Ocalały DDR2", tag_greek_market: "Rynek grecki", tag_open_source: "Open source",
-  about_hero_eyebrow: "Kim jesteśmy", about_hero_title: "Jedna osoba.<br>Mnóstwo <em>PC-tów</em>.", about_hero_desc: "betterPC to projekt jednoosobowy zrodzony z frustracji: <strong>wiele osób przepłaca za komputery, których nie rozumie</strong>, lub wyrzuca sprawne stare części. <br><br>Niezależnie czy budujesz gamingowego potwora, czy ratujesz DDR2 — ten serwis jest dla Ciebie.",
-  about_avatar_name: "Twórca", about_avatar_role: "Założyciel · betterPC", about_avatar_bio: "Entuzjasta PC i fan recyklingu sprzętu. Zbudowałem wszystko, od DDR2 biurowych po chłodzone wodą maszyny do gier.",
-  about_story_eyebrow: "Historia", about_story_title: "Dlaczego istnieje better<span>PC</span>", about_story_h1: "Problem starych części", about_story_p1: "Grecja ma miliony PC z lat 2006-2015 leżących w magazynach...", about_story_h2: "Konfigurator", about_story_p2: "Żaden inny grecki poradnik nie obejmuje DDR2 i DDR3...", about_story_h3: "Dla rynku greckiego", about_story_p3: "Ceny zawierają grecki VAT 24%...", about_story_h4: "Prosty język", about_story_p4: "Bez żargonu. Poradniki zrozumiałe dla każdego...",
-  about_values_eyebrow: "Zasady", about_values_title: "W co wierzy better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Uczciwe ceny", about_v1_desc: "Przejrzyste szacunki.", about_v2_title: "Bez reklam i afiliacji", about_v2_desc: "Nie zarabiamy na polecanych markach.", about_v3_title: "Stary sprzęt ma znaczenie", about_v3_desc: "Warto przywracać życie maszynom DDR2/DDR3.", about_v4_title: "Kompatybilność przede wszystkim", about_v4_desc: "Sprawdzamy CPU-płyta-RAM.", about_v5_title: "Kontekst grecki", about_v5_desc: "Ceny i rady oparte na lokalnym rynku.", about_v6_title: "Ciągły rozwój", about_v6_desc: "Aktualizacje zgodnie z rynkiem.",
-  about_cta_title: "Gotowy do budowy?", about_cta_desc: "Użyj konfiguratora, by wycenić swój następny PC.", about_cta_btn_primary: "🛠️ Otwórz konfigurator"
-},
-bg: {
-  nav_formats: "Формати", nav_ram: "RAM", nav_storage: "Съхранение", nav_cpu: "CPU", nav_build: "Сглобяване", nav_about: "За нас", nav_back: "← Назад към ръководството", footer_back: "Ръководство", footer_about: "За нас",
-  tag_pc_builder: "Сглобяване на PC", tag_hardware_nerd: "Хардуерен маниак", tag_ddr2_survivor: "Оцелял с DDR2", tag_greek_market: "Гръцки пазар", tag_open_source: "Open source",
-  about_hero_eyebrow: "Кои сме ние", about_hero_title: "Един човек.<br>Много <em>PC-та</em>.", about_hero_desc: "betterPC е личен проект, роден от едно разочарование: <strong>твърде много хора плащат прекалено много за компютри, които не разбират</strong>, или изхвърлят добро старо желязо. <br><br>Дали сглобявате геймърска машина или спасявате DDR2 система — този сайт е за вас.",
-  about_avatar_name: "Създателят", about_avatar_role: "Основател · betterPC", about_avatar_bio: "PC ентусиаст и майстор по рециклирането. Сглобявал съм всичко — от бюджетни DDR2 офис машини до мощни геймърски системи.",
-  about_story_eyebrow: "Историята", about_story_title: "Защо съществува better<span>PC</span>", about_story_h1: "Проблемът със стария хардуер", about_story_p1: "В Гърция има милиони компютри от периода 2006–2015, събиращи прах по складове...", about_story_h2: "Конфигураторът", about_story_p2: "Никой друг гръцки гайд не покрива DDR2 и DDR3 платформи...", about_story_h3: "За гръцкия пазар", about_story_p3: "Цените включват 24% гръцки ДДС...", about_story_h4: "Прост език", about_story_p4: "Без сложен жаргон. Гайдове, написани за всеки...",
-  about_values_eyebrow: "Принципи", about_values_title: "В какво вярва better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Честни цени", about_v1_desc: "Прозрачни оценки.", about_v2_title: "Без реклами и партньорски връзки", about_v2_desc: "Не печелим от препоръчани марки.", about_v3_title: "Старият хардуер има значение", about_v3_desc: "Заслужава си да вдъхнем живот на DDR2/DDR3 машините.", about_v4_title: "Съвместимост преди всичко", about_v4_desc: "Проверка на CPU-дънна платка-RAM.", about_v5_title: "Гръцки контекст", about_v5_desc: "Цени и съвети, базирани на местния пазар.", about_v6_title: "Постоянно подобрение", about_v6_desc: "Обновления според пазара.",
-  about_cta_title: "Готови ли сте?", about_cta_desc: "Използвайте конфигуратора, за да сметнете новия си компютър.", about_cta_btn_primary: "🛠️ Отвори конфигуратора"
-}
+    fr: {
+      nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Stockage", nav_cpu: "CPU", nav_build: "Construire", nav_about: "À propos", nav_back: "← Retour au guide", footer_back: "Guide", footer_about: "À propos",
+      tag_pc_builder: "Monteur PC", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Survivant DDR2", tag_greek_market: "Marché grec", tag_open_source: "Open source",
+      about_hero_eyebrow: "Qui sommes-nous", about_hero_title: "Une personne.<br>Beaucoup <em>de</em> PC.", about_hero_desc: "betterPC est un projet solo né d'une frustration simple : <strong>trop de gens paient trop cher pour des PC qu'ils ne comprennent pas</strong>, ou jettent du vieux matériel parfaitement fonctionnel. <br><br>Que vous montiez une machine de jeu flambant neuve ou que vous sauviez un PC DDR2, ce site est là pour vous.",
+      about_avatar_name: "Le Créateur", about_avatar_role: "Fondateur · betterPC", about_avatar_bio: "Passionné de PC et adepte du recyclage matériel. J'ai tout construit, des boîtiers de bureau DDR2 aux rigs de jeu refroidis par eau.",
+      about_story_eyebrow: "L'histoire", about_story_title: "Pourquoi better<span>PC</span> existe", about_story_h1: "Le problème du vieux matériel", about_story_p1: "La Grèce a des millions de PC de l'ère 2006-2015 oubliés dans des entrepôts...", about_story_h2: "Le configurateur", about_story_p2: "Aucun autre guide grec ne couvre les plateformes DDR2 et DDR3...", about_story_h3: "Pour le marché grec", about_story_p3: "Les prix incluent 24% de TVA grecque...", about_story_h4: "Langage simple", about_story_p4: "Pas de jargon inutile. Chaque guide est écrit pour être compris...",
+      about_values_eyebrow: "Principes", about_values_title: "Ce que défend better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prix honnêtes", about_v1_desc: "Estimations transparentes sans chiffres gonflés.", about_v2_title: "Sans pub ni affiliation", about_v2_desc: "Aucune commission sur les marques recommandées.", about_v3_title: "Le vieux matériel compte", about_v3_desc: "Donner une seconde vie aux machines DDR2/DDR3 en vaut la peine.", about_v4_title: "Compatibilité avant tout", about_v4_desc: "Vérification systématique CPU-mobo-RAM.", about_v5_title: "Contexte grec", about_v5_desc: "Basé sur le marché local et européen.", about_v6_title: "Amélioration continue", about_v6_desc: "Mises à jour constantes selon l'évolution du marché.",
+      about_cta_title: "Prêt à construire ?", about_cta_desc: "Utilisez le configurateur pour chiffrer votre prochain PC.", about_cta_btn_primary: "🛠️ Ouvrir le configurateur"
+    },
+    ru: {
+      nav_formats: "Форматы", nav_ram: "RAM", nav_storage: "Хранилище", nav_cpu: "CPU", nav_build: "Сборка", nav_about: "О нас", nav_back: "← Назад к гиду", footer_back: "Гид", footer_about: "О нас",
+      tag_pc_builder: "Сборщик ПК", tag_hardware_nerd: "Железячник", tag_ddr2_survivor: "Выживший DDR2", tag_greek_market: "Греческий рынок", tag_open_source: "Open source",
+      about_hero_eyebrow: "Кто мы", about_hero_title: "Один человек.<br>Много <em>ПК</em>.", about_hero_desc: "betterPC — это проект одного человека, рожденный из простой мысли: <strong>многие переплачивают за ПК, которых не понимают</strong>, или выбрасывают хорошее старое железо. <br><br>Собираете ли вы мощный игровой ПК или спасаете старый DDR2 — этот сайт поможет.",
+      about_avatar_name: "Создатель", about_avatar_role: "Основатель · betterPC", about_avatar_bio: "Энтузиаст ПК и мастер по восстановлению старого железа. Собирал всё: от бюджетных офисных DDR2 до мощных игровых систем.",
+      about_story_eyebrow: "История", about_story_title: "Почему существует better<span>PC</span>", about_story_h1: "Проблема старого железа", about_story_p1: "В Греции миллионы ПК 2006–2015 годов пылятся на складах...", about_story_h2: "Конфигуратор сборки", about_story_p2: "Ни один другой греческий гайд не охватывает DDR2 и DDR3...", about_story_h3: "Для греческого рынка", about_story_p3: "Цены включают греческий НДС 24%...", about_story_h4: "Простой язык", about_story_p4: "Никакого сложного жаргона. Только понятные инструкции...",
+      about_values_eyebrow: "Принципы", about_values_title: "What better<span style='color: #ff7a00;'>PC</span> stands for", about_v1_title: "Честные цены", about_v1_desc: "Реальные оценки без искусственного завышения.", about_v2_title: "Без рекламы и партнерок", about_v2_desc: "Мы не зарабатываем на рекомендациях брендов.", about_v3_title: "Старое железо важно", about_v3_desc: "Машины на DDR2/DDR3 всё ещё могут приносить пользу.", about_v4_title: "Совместимость прежде всего", about_v4_desc: "Всегда проверяем связки CPU-плата-RAM.", about_v5_title: "Греческий контекст", about_v5_desc: "Цены и советы основаны на местном рынке.", about_v6_title: "Постоянное улучшение", about_v6_desc: "Гайды обновляются вслед за рынком.",
+      about_cta_title: "Готовы к сборке?", about_cta_desc: "Используйте конфигуратор для расчета стоимости вашего ПК.", about_cta_btn_primary: "🛠️ Открыть конфигуратор"
+    },
+    it: {
+      nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Archivio", nav_cpu: "CPU", nav_build: "Assembla", nav_about: "Chi siamo", nav_back: "← Torna alla Guida", footer_back: "Guida", footer_about: "Chi siamo",
+      tag_pc_builder: "Assemblatore PC", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Sopravvissuto DDR2", tag_greek_market: "Mercato greco", tag_open_source: "Open source",
+      about_hero_eyebrow: "Chi siamo", about_hero_title: "Una persona.<br>Tanti <em>PC</em>.", about_hero_desc: "betterPC è un progetto individuale nato da una frustrazione: <strong>molti pagano troppo per PC che non comprendono</strong>, o buttano hardware vecchio ancora perfettamente funzionante. <br><br>Che tu stia assemblando un PC da gaming o salvando una vecchia macchina DDR2, questo sito fa per te.",
+      about_avatar_name: "Il Creatore", about_avatar_role: "Fondatore · betterPC", about_avatar_bio: "Appassionato di PC e riciclatore di hardware. Ho costruito di tutto, dai PC ufficio DDR2 alle macchine da gioco a liquido.",
+      about_story_eyebrow: "La storia", about_story_title: "Perché esiste better<span>PC</span>", about_story_h1: "Il problema dell'hardware vecchio", about_story_p1: "In Grecia ci sono milioni di PC del 2006-2015 dimenticati in magazzino...", about_story_h2: "Il configuratore", about_story_p2: "Nessun'altra guida greca copre le piattaforme DDR2 e DDR3...", about_story_h3: "Per il mercato greco", about_story_p3: "I prezzi includono l'IVA greca al 24%...", about_story_h4: "Linguaggio semplice", about_story_p4: "Nessun gergo senza spiegazione. Guide scritte per tutti...",
+      about_values_eyebrow: "Principi", about_values_title: "I valori di better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prezzi onesti", about_v1_desc: "Stime trasparenti, mai gonfiate.", about_v2_title: "Niente pubblicità o affiliate", about_v2_desc: "Nessun guadagno dai consigli sulle marche.", about_v3_title: "L'hardware vecchio conta", about_v3_desc: "Ridare vita alle macchine DDR2/DDR3 è importante.", about_v4_title: "Compatibilità prima di tutto", about_v4_desc: "Controllo rigoroso CPU-mobo-RAM.", about_v5_title: "Contesto greco", about_v5_desc: "Prezzi e consigli basati sul mercato locale.", about_v6_title: "Miglioramento costante", about_v6_desc: "Aggiornamenti continui basati sul mercato.",
+      about_cta_title: "Pronto ad assemblare?", about_cta_desc: "Usa il configuratore per il tuo prossimo PC.", about_cta_btn_primary: "🛠️ Apri configuratore"
+    },
+    sv: {
+      nav_formats: "Format", nav_ram: "RAM", nav_storage: "Lagring", nav_cpu: "CPU", nav_build: "Bygg", nav_about: "Om oss", nav_back: "← Tillbaka till guiden", footer_back: "Guide", footer_about: "Om oss",
+      tag_pc_builder: "PC-byggare", tag_hardware_nerd: "Hårdvarunörd", tag_ddr2_survivor: "DDR2-överlevare", tag_greek_market: "Grekiska marknaden", tag_open_source: "Öppen källkod",
+      about_hero_eyebrow: "Vilka vi är", about_hero_title: "En person.<br>Många <em>PC:s</em>.", about_hero_desc: "betterPC är ett soloprojekt född ur en altenativ frustration: <strong>många betalar för mycket för datorer de inte förstår</strong>, eller slänger gammal hårdvara som fungerar utmärkt. <br><br>Oavsett om du bygger en speldator eller räddar en DDR2-maskin, hjälper denna sida dig.",
+      about_avatar_name: "Skaparen", about_avatar_role: "Grundare · betterPC", about_avatar_bio: "PC-entusiast och hårdvaruåtervinnare. Jag har byggt allt från enkla DDR2-kontorsmaskiner till avancerade vattenkylda gaming-datorer.",
+      about_story_eyebrow: "Historien", about_story_title: "Varför better<span>PC</span> finns", about_story_h1: "Problemet med gammal hårdvara", about_story_p1: "I Grekland finns miljontals PC från 2006-2015 i förråd...", about_story_h2: "Konfiguratorn", about_story_p2: "Ingen annan grekisk guide täcker DDR2 och DDR3...", about_story_h3: "För den grekiska marknaden", about_story_p3: "Priser inkluderar 24% grekisk moms...", about_story_h4: "Enkelt språk", about_story_p4: "Ingen krånglig jargon. Guider för alla...",
+      about_values_eyebrow: "Principer", about_values_title: "Vad better<span style='color: #ff7a00;'>PC</span> står för", about_v1_title: "Ärliga priser", about_v1_desc: "Transparenta estimat.", about_v2_title: "Inga annonser eller affiliates", about_v2_desc: "Vi tjänar ingenting på märkesrekommendationer.", about_v3_title: "Gammal hårdvara räknas", about_v3_desc: "Att ge liv åt DDR2/DDR3-maskiner är värdefullt.", about_v4_title: "Kompatibilitet först", about_v4_desc: "Koll av CPU-mobo-RAM innan köp.", about_v5_title: "Grekisk kontext", about_v5_desc: "Priser anpassade efter den lokala marknaden.", about_v6_title: "Ständig förbättring", about_v6_desc: "Uppdateras i takt med marknaden.",
+      about_cta_title: "Redo att bygga?", about_cta_desc: "Använd konfiguratorn för att prissätta din nästa PC.", about_cta_btn_primary: "🛠️ Öppna konfiguratorn"
+    },
+    pt: {
+      nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Armazenamento", nav_cpu: "CPU", nav_build: "Montar", nav_about: "Sobre nós", nav_back: "← Voltar ao Guia", footer_back: "Guia", footer_about: "Sobre",
+      tag_pc_builder: "Montador de PC", tag_hardware_nerd: "Nerd de hardware", tag_ddr2_survivor: "Sobrevivente DDR2", tag_greek_market: "Mercado grego", tag_open_source: "Código aberto",
+      about_hero_eyebrow: "Quem somos", about_hero_title: "Uma pessoa.<br>Muitos <em>PCs</em>.", about_hero_desc: "betterPC é um projeto solo nascido de uma frustração: <strong>muita gente paga demais por PCs que não entende</strong>, ou joga fora hardware antigo perfeito. <br><br>Seja montando um PC gamer novo ou resgatando uma máquina DDR2, este site é para você.",
+      about_avatar_name: "O Criador", about_avatar_role: "Fundador · betterPC", about_avatar_bio: "Entusiasta de PCs e reciclador de hardware. Construí de tudo, desde PCs DDR2 básicos até rigs de jogos resfriados a água.",
+      about_story_eyebrow: "A história", about_story_title: "Por que o better<span>PC</span> existe", about_story_h1: "O problema do hardware antigo", about_story_p1: "A Grécia tem milhões de PCs de 2006-2015 esquecidos em armazéns...", about_story_h2: "O configurador", about_story_p2: "Nenhum outro guia grego cobre plataformas DDR2 e DDR3...", about_story_h3: "Para o mercado grego", about_story_p3: "Preços incluem 24% de IVA grego...", about_story_h4: "Linguagem simples", about_story_p4: "Sem jargões sem explicação. Guias escritos para todos...",
+      about_values_eyebrow: "Princípios", about_values_title: "O que o better<span style='color: #ff7a00;'>PC</span> defende", about_v1_title: "Preços honestos", about_v1_desc: "Estimativas transparentes.", about_v2_title: "Sem anúncios ou afiliados", about_v2_desc: "Não ganhamos nada com marcas recomendadas.", about_v3_title: "Hardware antigo importa", about_v3_desc: "Dar vida a máquinas DDR2/DDR3 vale a pena.", about_v4_title: "Compatibilidade em primeiro lugar", about_v4_desc: "Verificação de CPU-placa-RAM rigorosa.", about_v5_title: "Contexto grego", about_v5_desc: "Preços e conselhos baseados no mercado local.", about_v6_title: "Melhoria contínua", about_v6_desc: "Guias atualizados com o mercado.",
+      about_cta_title: "Pronto para montar?", about_cta_desc: "Use o configurador para calcular seu próximo PC.", about_cta_btn_primary: "🛠️ Abrir configurador"
+    },
+    ro: {
+      nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Stocare", nav_cpu: "CPU", nav_build: "Construiește", nav_about: "Despre noi", nav_back: "← Înapoi la Ghid", footer_back: "Ghid", footer_about: "Despre",
+      tag_pc_builder: "PC builder", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Supraviețuitor DDR2", tag_greek_market: "Piața grecească", tag_open_source: "Open source",
+      about_hero_eyebrow: "Cine suntem", about_hero_title: "O singură persoană.<br>Multe <em>PC-uri</em>.", about_hero_desc: "betterPC este un proiect personal născut dintr-o frustrare: <strong>prea mulți oameni plătesc prea mult pentru calculatoare pe care nu le înțeleg</strong>, sau aruncă hardware vechi funcțional. <br><br>Fie că asamblezi un PC de gaming sau salvezi un sistem DDR2, acest site te ajută.",
+      about_avatar_name: "Creatorul", about_avatar_role: "Fondator · betterPC", about_avatar_bio: "Entuziast PC și pasionat de reciclare hardware. Am construit totul, de la sisteme DDR2 de birou până la PC-uri gaming complexe.",
+      about_story_eyebrow: "Povestea", about_story_title: "De ce există better<span>PC</span>", about_story_h1: "Problema hardware-ului vechi", about_story_p1: "Grecia are milioane de PC-uri din 2006-2015 uitate în depozite...", about_story_h2: "Configuratorul", about_story_p2: "Niciun alt ghid grecesc nu acoperă platformele DDR2 și DDR3...", about_story_h3: "Pentru piața grecească", about_story_p3: "Prețurile includ TVA-ul grecesc de 24%...", about_story_h4: "Limbaj simplu", about_story_p4: "Fără jargon inutil. Ghiduri scrise pentru oricine...",
+      about_values_eyebrow: "Principii", about_values_title: "Ce susține better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Prețuri oneste", about_v1_desc: "Estimări transparente.", about_v2_title: "Fără reclame sau afilieri", about_v2_desc: "Nu câștigăm nimic din recomandări de branduri.", about_v3_title: "Hardware-ul vechi contează", about_v3_desc: "Să dai o nouă viață sistemelor DDR2/DDR3 merită.", about_v4_title: "Compatibilitatea pe primul loc", about_v4_desc: "Verificare CPU-placă de bază-RAM.", about_v5_title: "Context grecesc", about_v5_desc: "Prețuri și sfaturi bazate pe piața locală.", about_v6_title: "Îmbunătățire continuă", about_v6_desc: "Actualizări constante în funcție de piață.",
+      about_cta_title: "Gata de asamblare?", about_cta_desc: "Folosește configuratorul pentru a-ți calcula următorul PC.", about_cta_btn_primary: "🛠️ Deschide configuratorul"
+    },
+    pl: {
+      nav_formats: "Formaty", nav_ram: "RAM", nav_storage: "Pamięć", nav_cpu: "CPU", nav_build: "Buduj", nav_about: "O nas", nav_back: "← Wróć do poradnika", footer_back: "Poradnik", footer_about: "O nas",
+      tag_pc_builder: "Składacz PC", tag_hardware_nerd: "Hardware nerd", tag_ddr2_survivor: "Ocalały DDR2", tag_greek_market: "Rynek grecki", tag_open_source: "Open source",
+      about_hero_eyebrow: "Kim jesteśmy", about_hero_title: "Jedna osoba.<br>Mnóstwo <em>PC-tów</em>.", about_hero_desc: "betterPC to projekt jednoosobowy zrodzony z frustracji: <strong>wiele osób przepłaca za komputery, których nie rozumie</strong>, ut wyrzuca sprawne stare części. <br><br>Niezależnie czy budujesz gamingowego potwora, czy ratujesz DDR2 — ten serwis jest dla Ciebie.",
+      about_avatar_name: "Twórca", about_avatar_role: "Założyciel · betterPC", about_avatar_bio: "Entuzjasta PC i fan recyklingu sprzętu. Zbudowałem wszystko, od DDR2 biurowych po chłodzone wodą maszyny do gier.",
+      about_story_eyebrow: "Historia", about_story_title: "Dlaczego istnieje better<span>PC</span>", about_story_h1: "Problem starych części", about_story_p1: "Grecja ma miliony PC z lat 2006-2015 leżących w magazynach...", about_story_h2: "Konfigurator", about_story_p2: "Żaden inny grecki poradnik nie obejmuje DDR2 i DDR3...", about_story_h3: "Dla rynku greckiego", about_story_p3: "Ceny zawierają grecki VAT 24%...", about_story_h4: "Prosty język", about_story_p4: "Bez żargonu. Poradniki zrozumiałe dla każdego...",
+      about_values_eyebrow: "Zasady", about_values_title: "W co wierzy better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Uczciwe ceny", about_v1_desc: "Przejrzyste szacunki.", about_v2_title: "Bez reklam i afiliacji", about_v2_desc: "Nie zarabiamy na polecanych markach.", about_v3_title: "Stary sprzęt ma znaczenie", about_v3_desc: "Warto przywracać życie maszynom DDR2/DDR3.", about_v4_title: "Kompatybilność przede wszystkim", about_v4_desc: "Sprawdzamy CPU-płyta-RAM.", about_v5_title: "Kontekst grecki", about_v5_desc: "Ceny i rady oparte na lokalnym rynku.", about_v6_title: "Ciągły rozwój", about_v6_desc: "Aktualizacje zgodnie z rynkiem.",
+      about_cta_title: "Gotowy do budowy?", about_cta_desc: "Użyj konfiguratora, by wycenić swój następny PC.", about_cta_btn_primary: "🛠️ Otwórz konfigurator"
+    },
+    bg: {
+      nav_formats: "Формати", nav_ram: "RAM", nav_storage: "Съхранение", nav_cpu: "CPU", nav_build: "Сглобяване", nav_about: "За нас", nav_back: "← Назад към ръководството", footer_back: "Ръководство", footer_about: "За нас",
+      tag_pc_builder: "Сглобяване на PC", tag_hardware_nerd: "Хардуерен маниак", tag_ddr2_survivor: "Оцелял с DDR2", tag_greek_market: "Гръцки пазар", tag_open_source: "Open source",
+      about_hero_eyebrow: "Кои сме ние", about_hero_title: "Един човек.<br>Много <em>PC-та</em>.", about_hero_desc: "betterPC е личен проект, роден от едно разочарование: <strong>твърде много хора плащат прекалено много за компютри, които не разбират</strong>, или изхвърлят добро старо желязо. <br><br>Дали сглобявате геймърска машина или спасявате DDR2 система — този сайт е за вас.",
+      about_avatar_name: "Създателят", about_avatar_role: "Основател · betterPC", about_avatar_bio: "PC ентусиаст и майстор по рециклирането. Сглобявал съм всичко — от бюджетни DDR2 офис машини до мощни геймърски системи.",
+      about_story_eyebrow: "Историята", about_story_title: "Защо съществува better<span>PC</span>", about_story_h1: "Проблемът със стария хардуер", about_story_p1: "В Гърция има милиони компютри от периода 2006–2015, събиращи прах по складове...", about_story_h2: "Конфигураторът", about_story_p2: "Никой друг гръцки гайд не покрива DDR2 и DDR3 платформи...", about_story_h3: "За гръцкия пазар", about_story_p3: "Цените включват 24% гръцки ДДС...", about_story_h4: "Прост език", about_story_p4: "Без сложен жаргон. Гайдове, написани за всеки...",
+      about_values_eyebrow: "Принципи", about_values_title: "В какво вярва better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Честни цени", about_v1_desc: "Прозрачни оценки.", about_v2_title: "Без реклами и партньорски връзки", about_v2_desc: "Не печелим от препоръчани марки.", about_v3_title: "Старият хардуер има значение", about_v3_desc: "Заслужава си да вдъхнем живот на DDR2/DDR3 машините.", about_v4_title: "Съвместимост преди всичко", about_v4_desc: "Проверка на CPU-дънна платка-RAM.", about_v5_title: "Гръцки контекст", about_v5_desc: "Цени и съвети, базирани на местния пазар.", about_v6_title: "Постоянно подобрение", about_v6_desc: "Обновления според пазара.",
+      about_cta_title: "Готови ли сте?", about_cta_desc: "Използвайте конфигуратора, за да сметнете новия си компютър.", about_cta_btn_primary: "🛠️ Отвори конфигуратора"
+    }
   };
 
-  // 2. Identify selection component references
   const langSelect = document.getElementById('langSelect');
 
   // 3. Application rendering engine
@@ -717,15 +493,16 @@ bg: {
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (dictionary[lang] && dictionary[lang][key]) {
-        // Critical fix: use innerHTML to parse embedded structural text tags seamlessly!
         element.innerHTML = dictionary[lang][key];
       }
     });
-    // Persist user selection target
+    
+    // Αποθήκευση της επιλογής στο localStorage για τις επόμενες σελίδες
     localStorage.setItem('userLanguage', lang);
+    
+    // Κρίσιμο fix: Συγχρονισμός της τιμής του dropdown ώστε να δείχνει τη σωστή γλώσσα
     if (langSelect) langSelect.value = lang;
     
-    // Sync document element attributes
     document.documentElement.setAttribute("lang", lang);
   }
 
@@ -737,6 +514,7 @@ bg: {
   }
 
   // 5. Run configuration on application launch
+  // Διαβάζει το localStorage. Αν δεν υπάρχει τίποτα αποθηκευμένο, βάζει default τα αγγλικά ('en')
   const savedLang = localStorage.getItem('userLanguage') || 'en';
   translatePage(savedLang);
 </script>
