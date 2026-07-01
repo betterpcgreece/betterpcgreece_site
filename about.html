@@ -497,7 +497,7 @@
     });
 
     // 2. ΑΠΟΘΗΚΕΥΣΗ: Γράφουμε στο localStorage
-    localStorage.setItem('userLanguage', lang);
+    localStorage.setItem('selectedLanguage', lang);
 
     // 3. ΕΠΙΒΟΛΗ: Ενημερώνουμε το dropdown να δείχνει τη σωστή γλώσσα
     if (langSelect) langSelect.value = lang;
@@ -508,7 +508,7 @@
   // 4. ΕΚΤΕΛΕΣΗ κατά τη φόρτωση
   window.addEventListener('DOMContentLoaded', () => {
     // Διαβάζουμε τι υπάρχει αποθηκευμένο (αν δεν υπάρχει, βάζουμε 'en')
-    const savedLang = localStorage.getItem('userLanguage') || 'en';
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     
     // Επιβάλλουμε τη γλώσσα στο dropdown και στο UI
     translatePage(savedLang);
@@ -520,6 +520,7 @@
       translatePage(e.target.value); // Εδώ χρησιμοποιούμε το e.target.value (το this.value)
     });
   }
+
 </script>
 
  
