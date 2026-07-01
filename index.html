@@ -936,5 +936,38 @@
       updateLanguage(e.target.value);
     });
   </script>
+  <script>
+    // 1. Κατά τη φόρτωση της σελίδας, έλεγξε αν υπάρχει ήδη αποθηκευμένη γλώσσα
+    document.addEventListener("DOMContentLoaded", function() {
+        const savedLanguage = localStorage.getItem("selectedLanguage");
+        
+        if (savedLanguage) {
+            // Αν υπάρχει αποθηκευμένη γλώσσα, εφάρμοσέ την (π.χ. κάλεσε τη συνάρτηση αλλαγής γλώσσας)
+            changeLanguage(savedLanguage);
+            
+            // Προαιρετικά: Ενημέρωσε και το drop-down/κουμπί επιλογής γλώσσας αν έχεις
+            const languageSelect = document.getElementById("languageSelect");
+            if (languageSelect) {
+                languageSelect.value = savedLanguage;
+            }
+        }
+    });
+
+    // 2. Η συνάρτηση που καλείται όταν ο χρήστης αλλάζει γλώσσα
+    function changeLanguage(lang) {
+        // Αποθήκευση της νέας επιλογής στο localStorage
+        localStorage.setItem("selectedLanguage", lang);
+
+        // Εδώ μπαίνει ο δικός σου κώδικας που αλλάζει τα κείμενα στην οθόνη
+        // Παράδειγμα:
+        if (lang === "el") {
+            // Ελληνικά κείμενα...
+            console.log("Η γλώσσα άλλαξε σε Ελληνικά");
+        } else if (lang === "en") {
+            // Αγγλικά κείμενα...
+            console.log("Η γλώσσα άλλαξε σε Αγγλικά");
+        }
+    }
+</script>
 </body>
 </html>
