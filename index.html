@@ -101,7 +101,7 @@
     text-shadow: 0 2px 14px rgba(0,0,0,0.7);
     max-width: 520px;
   }
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--bg-secondary); border-bottom: 1px solid var(--border); sticky; top: 0; z-index: 100; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background: var(--bg-secondary); border-bottom: 1px solid var(--border); position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
     .logo { font-size: 1.5rem; font-weight: 700; }
     .nav-links a { margin: 0 1rem; color: var(--text-muted); text-decoration: none; transition: color 0.3s; }
     .nav-links a:hover { color: var(--text-main); }
@@ -180,7 +180,7 @@
         Everything you need to know about PC hardware — explored, compared, and explained so you can build with confidence.
       </p>
       <div class="about-div">
-       <a href="about.html">Who are we?</a>
+       <a href="about.html" data-i18n="whoarewe">Who are we?</a>
       </div>
     </div>
   </div>
@@ -407,7 +407,7 @@
   <script>
     const translations = {
       en: {
-        nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Storage", nav_cpu: "CPU", nav_gpu: "GPU", nav_psu_cooling: "PSU & Cooling", nav_about: "About us", nav_build_btn: "Build Your PC",
+        nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Storage", whoarewe: "Who are we?", nav_cpu: "CPU", nav_gpu: "GPU", nav_psu_cooling: "PSU & Cooling", nav_about: "About us", nav_build_btn: "Build Your PC",
         hero_sub: "Hardware Intelligence", hero_tagline: "Build better. Be better.", hero_desc: "Everything you need to know about PC hardware — explored, compared, and explained so you can build with confidence.", hero_link: "Who are we?",
         formats_tag: "Form Factor", formats_title: "Motherboard Formats", formats_desc: "The motherboard determines which components fit in your build. Bigger boards offer more expansion slots; smaller ones save space.",
         formats_atx_tag: "Full Size", formats_atx_desc: "The standard for most desktop builds. Plenty of PCIe slots, RAM slots, and room to grow.",
@@ -446,7 +446,7 @@
         footer_build: "Build smart."
       },
       el: {
-        nav_formats: "Μορφές", nav_ram: "RAM", nav_storage: "Αποθηκευτικός Χώρος", nav_cpu: "Επεξεργαστής", nav_gpu: "GPU", nav_psu_cooling: "PSU & Ψύξη", nav_about: "Σχετικά με εμάς", nav_build_btn: "Φτιάξε το PC σου",
+        nav_formats: "Μορφές", nav_ram: "RAM", nav_storage: "Αποθηκευτικός Χώρος", whoarewe: "Ποιοι είμαστε?",nav_cpu: "Επεξεργαστής", nav_gpu: "GPU", nav_psu_cooling: "PSU & Ψύξη", nav_about: "Σχετικά με εμάς", nav_build_btn: "Φτιάξε το PC σου",
         hero_sub: "Νοημοσύνη Υλικού", hero_tagline: "Χτίσε καλύτερα. Γίνε καλύτερος.", hero_desc: "Όλα όσα πρέπει να γνωρίζετε για το υλικό υπολογιστών — αναλύονται, συγκρίνονται και επεξηγούνται για να χτίζετε με αυτοπεποίθηση.", hero_link: "Ποιοι είμαστε;",
         formats_tag: "Μέγεθος", formats_title: "Μορφές Μητρικής", formats_desc: "Η μητρική καθορίζει ποια εξαρτήματα ταιριάζουν στην κατασκευή σας. Οι μεγαλύτερες κάρτες προσφέρουν περισσότερες υποδοχές επέκτασης, οι μικρότερες εξοικονομούν χώρο.",
         formats_atx_tag: "Πλήρες Μέγεθος", formats_atx_desc: "Το πρότυπο για τις περισσότερες επιτραπέζιες κατασκευές. Άφθονες υποδοχές PCIe, υποδοχές RAM και περιθώριο ανάπτυξης.",
@@ -485,7 +485,7 @@
         footer_build: "Χτίσε έξυπνα."
       },
       de: {
-        nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Speicherplatz", nav_cpu: "CPU", nav_gpu: "GPU", nav_psu_cooling: "Netzteile & Kühlung", nav_about: "Über uns", nav_build_btn: "PC Konfigurieren",
+        nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Speicherplatz", nav_cpu: "CPU", whoarewe: "Wer sind wir?", nav_gpu: "GPU", nav_psu_cooling: "Netzteile & Kühlung", nav_about: "Über uns", nav_build_btn: "PC Konfigurieren",
         hero_sub: "Hardware-Intelligenz", hero_tagline: "Besser bauen. Besser sein.", hero_desc: "Alles, was Sie über PC-Hardware wissen müssen — untersucht, verglichen und erklärt, damit Sie mit Vertrauen bauen können.", hero_link: "Wer sind wir?",
         formats_tag: "Formfaktor", formats_title: "Mainboard-Formate", formats_desc: "Das Mainboard bestimmt, welche Komponenten in Ihren PC passen. Größere Platinen bieten mehr Erweiterungssteckplätze; kleinere sparen Platz.",
         formats_atx_tag: "Volle Größe", formats_atx_desc: "Der Standard für die meisten Desktop-Systeme. Viele PCIe-Steckplätze, RAM-Bänke und Raum für Upgrades.",
@@ -524,7 +524,7 @@
         footer_build: "Smart bauen."
       },
       fr: {
-        nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Stockage", nav_cpu: "Processeur", nav_gpu: "GPU", nav_psu_cooling: "Alim & Refroidissement", nav_about: "À propos de nous", nav_build_btn: "Créer votre PC",
+        nav_formats: "Formats", nav_ram: "RAM", nav_storage: "Stockage", nav_cpu: "Processeur", whoarewe: "Qui sommes-nous ?", nav_gpu: "GPU", nav_psu_cooling: "Alim & Refroidissement", nav_about: "À propos de nous", nav_build_btn: "Créer votre PC",
         hero_sub: "Intelligence Matérielle", hero_tagline: "Configurez mieux. Soyez meilleur.", hero_desc: "Tout ce que vous devez savoir sur le matériel informatique — exploré, comparé et expliqué pour concevoir en toute confiance.", hero_link: "Qui sommes-nous ?",
         formats_tag: "Facteur de forme", formats_title: "Formats de Cartes Mères", formats_desc: "La carte mère détermine les composants compatibles. Les grandes cartes offrent plus d'extensions ; les petites économisent de l'espace.",
         formats_atx_tag: "Taille Complète", formats_atx_desc: "Le standard pour la plupart des PC de bureau. Nombreux slots PCIe, emplacements RAM et évolutivité garantie.",
@@ -563,7 +563,7 @@
         footer_build: "Configurez malin."
       },
       ru: {
-        nav_formats: "Форматы", nav_ram: "ОЗУ", nav_storage: "Накопитель", nav_cpu: "Процессор", nav_gpu: "GPU", nav_psu_cooling: "БП и охлаждение", nav_about: "О нас", nav_build_btn: "Собрать ПК",
+        nav_formats: "Форматы", nav_ram: "ОЗУ", nav_storage: "Накопитель", nav_cpu: "Процессор", nav_gpu: "GPU", whoarewe: "Кто мы?", nav_psu_cooling: "БП и охлаждение", nav_about: "О нас", nav_build_btn: "Собрать ПК",
         hero_sub: "Анализ Железа", hero_tagline: "Собирайте лучше. Будьте лучше.", hero_desc: "Всё, что нужно знать о компьютерном железе — изучено, сравнено и разложено по полочкам для вашей уверенности.", hero_link: "Кто мы такие?",
         formats_tag: "Форм-фактор", formats_title: "Форматы Материнских Плат", formats_desc: "Материнская плата определяет совместимость компонентов. Большие платы дают простор для апгрейда, маленькие — экономят место.",
         formats_atx_tag: "Полноразмерная", formats_atx_desc: "Стандарт для большинства ПК. Много слотов PCIe, разъемов ОЗУ и отличный потенциал для расширения.",
@@ -602,7 +602,7 @@
         footer_build: "Собирайте с умом."
       },
       sr: {
-        nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Skladištenje", nav_cpu: "Procesor", nav_gpu: "GPU", nav_psu_cooling: "Napajanje i hlađenje", nav_about: "O nama", nav_build_btn: "Sklopi svoj PC",
+        nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Skladištenje", nav_cpu: "Procesor", nav_gpu: "GPU", whoarewe: "Ko smo mi?", nav_psu_cooling: "Napajanje i hlađenje", nav_about: "O nama", nav_build_btn: "Sklopi svoj PC",
         hero_sub: "Hardverska inteligencija", hero_tagline: "Gradi bolje. Budi bolji.", hero_desc: "Sve što treba da znate o PC hardveru — istraženo, upoređeno i objašnjeno kako biste gradili sa samopouzdanjem.", hero_link: "Ko smo mi?",
         formats_tag: "Forma", formats_title: "Formati Matičnih Ploča", formats_desc: "Matična ploča određuje koje komponente staju u vaš računar. Veće ploče nude više slotova, manje štede prostor.",
         formats_atx_tag: "Puna veličina", formats_atx_desc: "Standard za većinu desktop računara. Dosta PCIe slotova, RAM ležišta i prostora za nadogradnju.",
@@ -641,7 +641,7 @@
         footer_build: "Gradi pametno."
       },
       it: {
-        nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Archiviazione", nav_cpu: "CPU", nav_gpu: "GPU", nav_psu_cooling: "Alimentatori e Dissipazione", nav_about: "Chi siamo", nav_build_btn: "Crea il tuo PC",
+        nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Archiviazione", nav_cpu: "CPU", nav_gpu: "GPU", whoarewe: "Chi siamo?", nav_psu_cooling: "Alimentatori e Dissipazione", nav_about: "Chi siamo", nav_build_btn: "Crea il tuo PC",
         hero_sub: "Intelligenza Hardware", hero_tagline: "Costruisci meglio. Sii migliore.", hero_desc: "Tutto quello che devi sapere sull'hardware del PC — analizzato, confrontato e spiegato per configurare con sicurezza.", hero_link: "Chi siamo?",
         formats_tag: "Fattore di forma", formats_title: "Formati Scheda Madre", formats_desc: "La scheda madre determina quali componenti sono compatibili. Le schede grandi offrono più slot; quelle piccole risparmiano spazio.",
         formats_atx_tag: "Dimensioni intere", formats_atx_desc: "Lo standard per la maggior parte dei PC fissi. Molti slot PCIe, slot RAM e ampio spazio per futuri upgrade.",
@@ -680,7 +680,7 @@
         footer_build: "Costruisci smart."
       },
       es: {
-        nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Almacenamiento", nav_cpu: "Procesador", nav_gpu: "GPU", nav_psu_cooling: "Fuentes y Ventilación", nav_about: "Sobre nosotros", nav_build_btn: "Configura tu PC",
+        nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Almacenamiento", nav_cpu: "Procesador", nav_gpu: "GPU", whoarewe: "¿Quiénes somos?", nav_psu_cooling: "Fuentes y Ventilación", nav_about: "Sobre nosotros", nav_build_btn: "Configura tu PC",
         hero_sub: "Inteligencia de Hardware", hero_tagline: "Construye mejor. Sé mejor.", hero_desc: "Todo lo que necesitas saber sobre hardware de PC: analizado, comparado y explicado para que montes tu equipo con total confianza.", hero_link: "¿Quiénes somos?",
         formats_tag: "Factor de forma", formats_title: "Formatos de Placa Base", formats_desc: "La placa base determina qué componentes caben en tu equipo. Las placas grandes ofrecen más expansión; las pequeñas ahorran espacio.",
         formats_atx_tag: "Tamaño Completo", formats_atx_desc: "El estándar para la mayoría de ordenadores de sobremesa. Muchos puertos PCIe, ranuras RAM y espacio para expandirse.",
@@ -719,7 +719,7 @@
         footer_build: "Construye inteligente."
       },
       pt: {
-        nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Armazenamento", nav_cpu: "Processador", nav_gpu: "GPU", nav_psu_cooling: "Fontes e Refrigeração", nav_about: "Sobre nós", nav_build_btn: "Monte seu PC",
+        nav_formats: "Formatos", nav_ram: "RAM", nav_storage: "Armazenamento", nav_cpu: "Processador", nav_gpu: "GPU", whoarewe: "Quem somos?", nav_psu_cooling: "Fontes e Refrigeração", nav_about: "Sobre nós", nav_build_btn: "Monte seu PC",
         hero_sub: "Inteligência de Hardware", hero_tagline: "Construa melhor. Seja melhor.", hero_desc: "Tudo o que você precisa saber sobre hardware de PC — explorado, comparado e explicado para você montar com total confiança.", hero_link: "Quem somos nós?",
         formats_tag: "Fator de forma", formats_title: "Formatos de Placa-Mãe", formats_desc: "A placa-mãe determina quais componentes cabem no seu computador. Placas maiores oferecem mais expansão; as menores economizam espaço.",
         formats_atx_tag: "Tamanho Total", formats_atx_desc: "O padrão para a maioria dos computadores de mesa. Muitas portas PCIe, slots de RAM e espaço para upgrade.",
@@ -758,7 +758,7 @@
         footer_build: "Construa inteligente."
       },
       pl: {
-        nav_formats: "Formaty", nav_ram: "RAM", nav_storage: "Pamięć", nav_cpu: "Procesor", nav_gpu: "GPU", nav_psu_cooling: "Zasilacze i Chłodzenie", nav_about: "O nas", nav_build_btn: "Złóż komputer",
+        nav_formats: "Formaty", nav_ram: "RAM", nav_storage: "Pamięć", nav_cpu: "Procesor", nav_gpu: "GPU", whoarewe: "Kim jesteśmy?", nav_psu_cooling: "Zasilacze i Chłodzenie", nav_about: "O nas", nav_build_btn: "Złóż komputer",
         hero_sub: "Analiza Sprzętowa", hero_tagline: "Buduj lepiej. Bądź najlepszy.", hero_desc: "Wszystko, co musisz wiedzieć o podzespołach komputerowych — sprawdzone, porównane i wyjaśnione, abyś mógł budować bez obaw.", hero_link: "Kim jesteśmy?",
         formats_tag: "Rozmiar", formats_title: "Formaty Płyt Głównych", formats_desc: "Płyta główna decyduje, jakie części zmieszczą się w komputerze. Większe oferują więcej slotów, mniejsze oszczędzają miejsce.",
         formats_atx_tag: "Pełny rozmiar", formats_atx_desc: "Standard dla większości komputerów stacjonarnych. Mnóstwo gniazd PCIe, slotów RAM i przestrzeni na rozbudowę.",
@@ -797,7 +797,7 @@
         footer_build: "Buduj mądrze."
       },
       sv: {
-        nav_formats: "Format", nav_ram: "RAM", nav_storage: "Lagring", nav_cpu: "Processor", nav_gpu: "GPU", nav_psu_cooling: "Nätaggregat & Kylning", nav_about: "Om oss", nav_build_btn: "Bygg din PC",
+        nav_formats: "Format", nav_ram: "RAM", nav_storage: "Lagring", nav_cpu: "Processor", nav_gpu: "GPU", whoarewe: "Vilka är vi?", nav_psu_cooling: "Nätaggregat & Kylning", nav_about: "Om oss", nav_build_btn: "Bygg din PC",
         hero_sub: "Hårdvaru-Intelligens", hero_tagline: "Bygg bättre. Bli bättre.", hero_desc: "Allt du behöver veta om datorkomponenter — utforskat, jämfört och förklarat så att du kan bygga med fullt förtroende.", hero_link: "Vilka är vi?",
         formats_tag: "Formfaktor", formats_title: "Moderkortsformat", formats_desc: "Moderkortet bestämmer vilka komponenter som passar. Större kort erbjuder fler expansionsplatser; mindre sparar utrymme.",
         formats_atx_tag: "Full storlek", formats_atx_desc: "Standarden för de flesta stationära datorer. Gott om PCIe-platser, RAM-kortplatser och utrymme att växa.",
@@ -836,7 +836,7 @@
         footer_build: "Bygg smart."
       },
       ro: {
-        nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Stocare", nav_cpu: "Procesor", nav_gpu: "GPU", nav_psu_cooling: "Surse & Răcire", nav_about: "Despre noi", nav_build_btn: "Configurează PC",
+        nav_formats: "Formate", nav_ram: "RAM", nav_storage: "Stocare", nav_cpu: "Procesor", nav_gpu: "GPU", whoarewe: "Cine suntem?", nav_psu_cooling: "Surse & Răcire", nav_about: "Despre noi", nav_build_btn: "Configurează PC",
         hero_sub: "Inteligență Hardware", hero_tagline: "Construiește mai bine. Fii mai bun.", hero_desc: "Tot ce trebuie să știi despre componentele PC — analizate, comparate și explicate pentru a construi cu încredere.", hero_link: "Cine suntem noi?",
         formats_tag: "Form Factor", formats_title: "Formate Plăci de Bază", formats_desc: "Placa de bază determină ce componente se potrivesc în sistem. Plăcile mai mari oferă mai multe sloturi; cele mici economisesc spațiu.",
         formats_atx_tag: "Dimensiune Completă", formats_atx_desc: "Standardul pentru majoritatea sistemelor desktop. Multe sloturi PCIe, sloturi RAM și spațiu de extindere.",
@@ -875,7 +875,7 @@
         footer_build: "Construiește inteligent."
       },
       bg: {
-        nav_formats: "Формати", nav_ram: "RAM", nav_storage: "Съхранение", nav_cpu: "Процесор", nav_gpu: "GPU", nav_psu_cooling: "Захранване и охлаждане", nav_about: "За нас", nav_build_btn: "Сглоби компютър",
+        nav_formats: "Формати", nav_ram: "RAM", nav_storage: "Съхранение", nav_cpu: "Процесор", whoarewe: "Кои сме ние?", nav_gpu: "GPU", nav_psu_cooling: "Захранване и охлаждане", nav_about: "За нас", nav_build_btn: "Сглоби компютър",
         hero_sub: "Хардуерен анализ", hero_tagline: "Строи по-добре. Бъди по-добър.", hero_desc: "Всичко, което трябва да знаете за компютърния хардуер — проучено, сравнено и обяснено, за да сглобявате с увереност.", hero_link: "Кои сме ние?",
         formats_tag: "Форм-фактор", formats_title: "Формати дънни платки", formats_desc: "Дънната платка определя кои компоненти ще паснат. По-големите предлагат повече слотове; по-малките спестяват място.",
         formats_atx_tag: "Пълен размер", formats_atx_desc: "Стандартът за повечето десктоп системи. Множество PCIe слотове, RAM слотове и пространство за надграждане.",
