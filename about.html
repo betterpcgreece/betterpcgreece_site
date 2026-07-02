@@ -430,6 +430,15 @@
       about_values_eyebrow: "Принципы", about_values_title: "What better<span style='color: #ff7a00;'>PC</span> stands for", about_v1_title: "Честные цены", about_v1_desc: "Реальные оценки без искусственного завышения.", about_v2_title: "Без рекламы и партнерок", about_v2_desc: "Мы не зарабатываем на рекомендациях брендов.", about_v3_title: "Старое железо важно", about_v3_desc: "Машины на DDR2/DDR3 всё ещё могут приносить пользу.", about_v4_title: "Совместимость прежде всего", about_v4_desc: "Всегда проверяем связки CPU-плата-RAM.", about_v5_title: "Греческий контекст", about_v5_desc: "Цены и советы основаны на местном рынке.", about_v6_title: "Постоянное улучшение", about_v6_desc: "Гайды обновляются вслед за рынком.",
       about_cta_title: "Готовы к сборке?", about_cta_desc: "Используйте конфигуратор для расчета стоимости вашего ПК.", about_cta_btn_primary: "🛠️ Открыть конфигуратор"
     },
+    sr: {
+      nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Skladištenje", nav_cpu: "CPU", nav_build: "Sastavi PC", nav_about: "O nama", nav_back: "← Nazad na vodič", footer_back: "Vodič", footer_about: "O nama",
+      tag_pc_builder: "PC builder", tag_hardware_nerd: "Hardware nerd", tag_ddr2_survivor: "DDR2 preživeli", tag_greek_market: "Grčko tržište", tag_open_source: "Otvoreni kod",
+      about_hero_eyebrow: "Ko smo mi", about_hero_title: "Jedna osoba.<br>Mnogo <em>računara</em>.", about_hero_desc: "betterPC je projekat jedne osobe, nastao iz jednostavne frustracije: <strong>previše ljudi preplaćuje za računare koje ne razumeju</strong>, ili bacaju sasvim ispravan stari hardver jer im niko nije rekao da i dalje odlično radi.<br><br>Bilo da sastavljate potpuno nov gejmerski računar ili spasavate DDR2 mašinu za baku i deku, ovaj sajt je tu za vas.",
+      about_avatar_name: "Tvorac", about_avatar_role: "Osnivač · <span style='color: white;'>better</span><span style='color: #ff7a00;'>PC</span>", about_avatar_bio: "Ljubitelj računara, majstor za petljanje i reciklažu starog hardvera. Sastavljao sam sve, od budžetskih DDR2 kancelarijskih mašina do vodeno hlađenih gejmerskih monstruma — i verujem da svako zaslužuje da zna šta se nalazi u njegovom računaru.",
+      about_story_eyebrow: "Priča", about_story_title: "Zašto better<span>PC</span> postoji", about_story_h1: "Problem sa starim hardverom", about_story_p1: "Grčka ima milione računara iz perioda 2006–2015 koji stoje po magacinima...", about_story_h2: "Konfigurator sastavljanja", about_story_p2: "Nijedan drugi grčki vodič ne pokriva DDR2 i DDR3 platforme...", about_story_h3: "Napravljeno za grčko tržište", about_story_p3: "Cene uključuju 24% grčkog PDV-a i odražavaju ono što biste zaista platili lokalno...", about_story_h4: "Jednostavan jezik, stvarno znanje", about_story_p4: "Bez žargona bez objašnjenja. Svaki vodič na ovom sajtu je napisan...",
+      about_values_eyebrow: "Principi", about_values_title: "Za šta se zalaže better<span style='color: #ff7a00;'>PC</span>", about_v1_title: "Poštene cene", about_v1_desc: "Cene su procene i tako su i označene. Nema naduvanih brojeva da bi konfiguracije izgledale jeftinije.", about_v2_title: "Bez reklama i partnerskih linkova", about_v2_desc: "betterPC ne zarađuje ništa preporučivanjem određenih brendova. Izbori se zasnivaju na vrednosti i dostupnosti.", about_v3_title: "Stari hardver je bitan", about_v3_desc: "DDR2 i DDR3 mašine i dalje mogu služiti svrsi. Vredi pomoći ljudima da im produže vek trajanja.", about_v4_title: "Kompatibilnost na prvom mestu", about_v4_desc: "Ništa se ne preporučuje bez provere. Kompatibilnost CPU–matična ploča–RAM se proverava pre nego što potrošite novac.", about_v5_title: "Grčki kontekst", about_v5_desc: "Cene, dostupnost i saveti o delovima zasnovani su na grčkom i širem EU tržištu, a ne na američkom.", about_v6_title: "Stalno unapređenje", about_v6_desc: "Liste delova, cene i vodiči se ažuriraju kako se tržište menja. Ovo nije sajt koji je zaboravljen.",
+      about_cta_title: "Spremni za sastavljanje?", about_cta_desc: "Koristite konfigurator da odredite cenu vašeg sledećeg računara — potpuno novog, budžetskog ili potpuno starog.", about_cta_btn_primary: "🛠️ Otvori Konfigurator PC-a"
+    },
     it: {
       nav_formats: "Formati", nav_ram: "RAM", nav_storage: "Archivio", nav_cpu: "CPU", nav_build: "Assembla", nav_about: "Chi siamo", nav_back: "← Torna alla Guida", footer_back: "Guida", footer_about: "Chi siamo",
       tag_pc_builder: "Assemblatore PC", tag_hardware_nerd: "Nerd hardware", tag_ddr2_survivor: "Sopravvissuto DDR2", tag_greek_market: "Mercato greco", tag_open_source: "Open source",
@@ -506,20 +515,12 @@
   }
 
   // 4. ΕΚΤΕΛΕΣΗ κατά τη φόρτωση
-  document.addEventListener("DOMContentLoaded", function() {
-    // 1. Get the stored language
-    const savedLang = localStorage.getItem("selectedLanguage") || "en";
+  window.addEventListener('DOMContentLoaded', () => {
+    // Διαβάζουμε τι υπάρχει αποθηκευμένο (αν δεν υπάρχει, βάζουμε 'en')
+    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
     
-    // 2. Set the dropdown to match the stored language (if dropdown exists)
-    const languageSelect = document.getElementById("language-selector");
-    if (languageSelect) {
-        languageSelect.value = savedLang;
-    }
-
-    // 3. Translate the page based on the stored language
-    if (typeof translatePage === 'function') {
-        translatePage(savedLang);
-    }
+    // Επιβάλλουμε τη γλώσσα στο dropdown και στο UI
+    translatePage(savedLang);
   });
 
   // 5. LISTENER: Όταν ο χρήστης αλλάζει το dropdown χειροκίνητα
