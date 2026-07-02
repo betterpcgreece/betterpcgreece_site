@@ -506,12 +506,20 @@
   }
 
   // 4. ΕΚΤΕΛΕΣΗ κατά τη φόρτωση
-  window.addEventListener('DOMContentLoaded', () => {
-    // Διαβάζουμε τι υπάρχει αποθηκευμένο (αν δεν υπάρχει, βάζουμε 'en')
-    const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+  document.addEventListener("DOMContentLoaded", function() {
+    // 1. Get the stored language
+    const savedLang = localStorage.getItem("selectedLanguage") || "en";
     
-    // Επιβάλλουμε τη γλώσσα στο dropdown και στο UI
-    translatePage(savedLang);
+    // 2. Set the dropdown to match the stored language (if dropdown exists)
+    const languageSelect = document.getElementById("language-selector");
+    if (languageSelect) {
+        languageSelect.value = savedLang;
+    }
+
+    // 3. Translate the page based on the stored language
+    if (typeof translatePage === 'function') {
+        translatePage(savedLang);
+    }
   });
 
   // 5. LISTENER: Όταν ο χρήστης αλλάζει το dropdown χειροκίνητα
